@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+	@apply transition-all;
+}
+
+.h1 {
+	@apply text-[3.75rem] leading-none font-manrope font-extrabold;
+}
+
+.h2 {
+	@apply text-[3rem] leading-none font-manrope font-bold;
+}
+
+.h3 {
+	@apply text-[2.25rem] leading-10 font-manrope font-bold;
+}
+
+.h4 {
+	@apply text-[1.75rem] leading-8 font-manrope font-bold;
+}
+
+.h5 {
+	@apply text-[1.25rem] leading-6 font-manrope font-bold;
+}
+
+.paragraph {
+	@apply text-[1rem] leading-6 font-inter;
+}
+
+.small {
+	@apply text-[.75rem] leading-4 font-inter font-medium;
+}
+
+.button {
+	@apply font-inter px-24 py-8 rounded-full outline outline-2 outline-transparent focus-visible:outline-current;
+}
+
+.button.solid-white {
+	@apply text-black bg-white hover:bg-white/80 focus:bg-white/80;
+}
+
+.button.solid-black {
+	@apply text-white bg-black hover:bg-black/80 focus:bg-black/80;
+}
+
+.button.solid-primary {
+	@apply text-black bg-lemon-lime hover:bg-lemon-lime/80 focus:bg-lemon-lime/80;
+}
+
+.button.translucent-white {
+	@apply text-white bg-white/10 hover:bg-white/20 focus:bg-white/20;
+}
+
+.button.translucent-black {
+	@apply text-white bg-black/10 hover:bg-black/20 focus:bg-black/20;
+}
+
+.button.translucent-primary {
+	@apply text-white bg-lemon-lime/10 hover:bg-lemon-lime/20 focus:bg-lemon-lime/20;
+}
+
+.flair-chip {
+	@apply font-inter text-[.75rem] leading-4 font-medium w-fit px-12 py-8 rounded-full flex justify-center items-center;
+}
+
+.flair-chip.green-chip {
+	@apply bg-malachite text-black;
+}
+
+.flair-chip.orange-chip {
+	@apply bg-pumpkin text-white;
+}
+
+.flair-chip.gray-chip {
+	@apply bg-onyx text-white;
+}
+
+.flair-chip.blue-chip {
+	@apply bg-blue text-white;
+}
+
+.flair-chip.pink-chip {
+	@apply bg-heliotrope text-black;
+}
