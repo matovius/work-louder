@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import Button from './Button.svelte';
 
 	import WlLogoFull from './icons/WLLogoFull.svelte';
 	import WlLogoShort from './icons/WLLogoShort.svelte';
@@ -14,6 +15,7 @@
 				<div class="h-24 hidden tablet-lg:inline-block text-lemon-lime">
 					<WlLogoFull />
 				</div>
+
 				<div class="h-24 inline-block tablet-lg:hidden text-lemon-lime">
 					<WlLogoShort />
 				</div>
@@ -26,6 +28,7 @@
 					<div class="h-36 hidden tablet-lg:inline-block">
 						<WlLogoFull />
 					</div>
+
 					<div class="h-36 inline-block tablet-lg:hidden">
 						<WlLogoShort />
 					</div>
@@ -35,27 +38,45 @@
 		<nav class="p-4 bg-white/60 backdrop-blur rounded-full border border-black/10">
 			<ul class="flex-row justify-center items-center gap-4 hidden tablet-lg:flex">
 				<li>
-					<button class="button solid-white">store</button>
+					<Button as="link" variant="ghost-black">
+						<span>store</span>
+					</Button>
 				</li>
+
 				<li>
-					<button class="button ghost-black">setup</button>
+					<Button as="link" variant="ghost-black">
+						<span>setup</span>
+					</Button>
 				</li>
+
 				<li>
-					<button class="button ghost-black">about</button>
+					<Button as="link" variant="ghost-black">
+						<span>about</span>
+					</Button>
 				</li>
+
 				<li>
-					<button class="button ghost-black">updates</button>
+					<Button as="link" variant="ghost-black">
+						<span>updates</span>
+					</Button>
 				</li>
+
 				<li>
-					<button class="button ghost-black">cart</button>
+					<Button as="button" variant="ghost-black">
+						<span>cart</span>
+					</Button>
 				</li>
 			</ul>
 			<ul class="flex flex-row justify-center items-center gap-4 tablet-lg:hidden">
 				<li>
-					<button class="button ghost-black">cart</button>
+					<Button as="button" variant="ghost-black">
+						<span>cart</span>
+					</Button>
 				</li>
 				<li>
-					<button class="button ghost-black">menu</button>
+					<Button as="button" variant="ghost-black">
+						<span>menu</span>
+					</Button>
 				</li>
 			</ul>
 		</nav>
