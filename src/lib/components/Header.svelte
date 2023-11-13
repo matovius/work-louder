@@ -5,7 +5,7 @@
 	import WlLogoShort from './icons/WLLogoShort.svelte';
 </script>
 
-<header class="w-full p-24 flex justify-center items-center">
+<header class="w-full flex justify-center items-center p-24 sticky top-0 z-10">
 	<div class="container flex flex-row justify-between items-center">
 		<div class="">
 			{#if $page.url.pathname === '/'}
