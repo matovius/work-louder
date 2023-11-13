@@ -64,6 +64,14 @@
 	@apply text-white bg-lemon-lime/10 hover:bg-lemon-lime/20 focus:bg-lemon-lime/20;
 }
 
+.button.ghost-white {
+	@apply text-white bg-transparent hover:bg-white/10 focus:bg-white/10;
+}
+
+.button.ghost-black {
+	@apply text-black bg-transparent hover:bg-black/20 focus:bg-black/20;
+}
+
 .flair-chip {
 	@apply font-inter text-[.75rem] leading-4 font-medium w-fit px-12 py-8 rounded-full flex justify-center items-center;
 }
@@ -86,4 +94,12 @@
 
 .flair-chip.pink-chip {
 	@apply bg-heliotrope text-black;
+}
+
+.icon {
+	@apply w-full h-full aspect-square;
+}
+
+.logo-icon {
+	@apply h-full;
 }
