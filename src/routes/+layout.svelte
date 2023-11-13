@@ -6,9 +6,11 @@
 	import '../app.css';
 
 	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <div class="text-white w-full bg-black min-h-[100dvh]">
 	<Header />
 	<slot />
+	<Footer />
 </div>
