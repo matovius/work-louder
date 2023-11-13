@@ -7,12 +7,14 @@
 
 <header class="w-full flex justify-center items-center p-24 sticky top-0 z-10">
 	<div class="container flex flex-row justify-between items-center">
-		<div class="">
+		<div
+			class="flex justify-center items-center px-12 py-8 bg-black/80 backdrop-blur rounded-full border border-white/10"
+		>
 			{#if $page.url.pathname === '/'}
-				<div class="h-36 hidden tablet-lg:inline-block text-lemon-lime">
+				<div class="h-24 hidden tablet-lg:inline-block text-lemon-lime">
 					<WlLogoFull />
 				</div>
-				<div class="h-24 mob-lg:h-36 inline-block tablet-lg:hidden text-lemon-lime">
+				<div class="h-24 inline-block tablet-lg:hidden text-lemon-lime">
 					<WlLogoShort />
 				</div>
 			{:else}
@@ -30,7 +32,7 @@
 				</a>
 			{/if}
 		</div>
-		<nav class="p-4 bg-white/60 backdrop-blur rounded-full">
+		<nav class="p-4 bg-white/60 backdrop-blur rounded-full border border-black/10">
 			<ul class="flex-row justify-center items-center gap-4 hidden tablet-lg:flex">
 				<li>
 					<button class="button solid-white">store</button>
