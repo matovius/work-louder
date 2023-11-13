@@ -21,9 +21,13 @@ export default {
 			8: '.5rem',
 			12: '.75rem',
 			24: '1.5rem',
+			36: '2.25rem',
 			48: '3rem',
 			96: '6rem',
-			120: '7.5rem'
+			120: '7.5rem',
+			240: '15rem',
+			360: '22.5rem',
+			480: '30rem'
 		},
 		borderRadius: {
 			none: '0',
