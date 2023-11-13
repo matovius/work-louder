@@ -1,1 +1,3 @@
-// place files you want to import through the `$lib` alias in this folder.
+export * from './components/Header.svelte';
+export * from './components/icons/WLLogoFull.svelte';
+export * from './components/icons/WLLogoShort.svelte';
