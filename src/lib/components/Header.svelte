@@ -9,7 +9,7 @@
 <header class="w-full flex justify-center items-center p-24 sticky top-0 z-10">
 	<div class="container flex flex-row justify-between items-center">
 		<div
-			class="flex justify-center items-center px-12 py-8 bg-black/80 backdrop-blur rounded-full border border-white/10"
+			class="flex justify-center items-center p-8 bg-black/80 backdrop-blur rounded-12 border border-white/10"
 		>
 			{#if $page.url.pathname === '/'}
 				<div class="h-24 hidden tablet-lg:inline-block text-lemon-lime">
@@ -22,7 +22,7 @@
 			{:else}
 				<a
 					href="/"
-					class="opacity-100 hover:opacity-60"
+					class="flex justify-center items-center opacity-100 hover:opacity-60 focus:opacity-60 rounded-4 outline outline-2 outline-offset-4 outline-transparent focus-visible:outline-lemon-lime"
 					aria-label="the work_louder logo. click to go back to the homepage."
 				>
 					<div class="h-24 hidden tablet-lg:inline-block">
