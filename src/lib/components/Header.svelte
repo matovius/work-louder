@@ -38,7 +38,7 @@
 		<nav class="p-4 bg-white/60 backdrop-blur rounded-full border border-black/10">
 			<ul class="flex-row justify-center items-center gap-4 hidden tablet-lg:flex">
 				<li>
-					<Button as="link" variant="ghost-black">
+					<Button as="link" variant="ghost-black" url="/store">
 						<span>store</span>
 					</Button>
 				</li>
