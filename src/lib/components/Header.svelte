@@ -25,11 +25,11 @@
 					class="opacity-100 hover:opacity-60"
 					aria-label="the work_louder logo. click to go back to the homepage."
 				>
-					<div class="h-36 hidden tablet-lg:inline-block">
+					<div class="h-24 hidden tablet-lg:inline-block">
 						<WlLogoFull />
 					</div>
 
-					<div class="h-36 inline-block tablet-lg:hidden">
+					<div class="h-24 inline-block tablet-lg:hidden">
 						<WlLogoShort />
 					</div>
 				</a>
