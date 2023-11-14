@@ -1,6 +1,7 @@
 <script lang="ts">
 	import InfiniteCarousel from './InfiniteCarousel.svelte';
 	import WlLogoFull from './icons/WLLogoFull.svelte';
+	import founderAvatar from '../images/avatar.png';
 </script>
 
 <footer class="w-full flex justify-center items-center">
@@ -12,7 +13,13 @@
 			<div class="h-36 mob-lg:h-48 text-white">
 				<WlLogoFull />
 			</div>
-			<div class="w-[12.6875rem] h-[8.5rem] bg-white/10" />
+			<div class="w-fit h-96">
+				<img
+					src={founderAvatar}
+					alt="emoticons of the founders, Mattia, and Michael"
+					class="h-full"
+				/>
+			</div>
 		</div>
 		<div id="bottom" class="w-full flex flex-col justify-start items-center gap-48">
 			<div class="w-full flex flex-col gap-24">
