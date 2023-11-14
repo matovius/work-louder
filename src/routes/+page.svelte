@@ -44,9 +44,9 @@
 				</Button>
 				<div
 					id="asterisk"
-					class="absolute bottom-0 left-0 w-240 max-w-[15rem] flex flex-col gap-12 p-24"
+					class="absolute bottom-0 tablet-lg:left-0 w-full tablet-lg:w-240 tablet-lg:max-w-[15rem] flex flex-row justify-center items-center tablet-lg:flex-col tablet-lg:justify-start tablet-lg:items-start gap-12 p-24"
 				>
-					<div class="w-fit p-4 bg-lemon-lime text-black rounded-full">
+					<div class="w-fit h-fit p-4 bg-lemon-lime text-black rounded-full">
 						<Asterisk />
 					</div>
 					<div class="w-full">
