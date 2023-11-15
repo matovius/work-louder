@@ -4,6 +4,30 @@
 
 	import WlLogoFull from './icons/WLLogoFull.svelte';
 	import WlLogoShort from './icons/WLLogoShort.svelte';
+
+	interface NavLink {
+		label: string;
+		url: string;
+	}
+
+	const NavLinks: NavLink[] = [
+		{
+			label: 'store',
+			url: '/store'
+		},
+		{
+			label: 'setup',
+			url: '/setup'
+		},
+		{
+			label: 'about',
+			url: '/about'
+		},
+		{
+			label: 'updates',
+			url: '/updates'
+		}
+	];
 </script>
 
 <header class="w-full flex justify-center items-center p-24 sticky top-0 z-10">
@@ -37,29 +61,19 @@
 		</div>
 		<nav class="p-4 bg-white/60 backdrop-blur rounded-full border border-black/10">
 			<ul class="flex-row justify-center items-center gap-4 hidden tablet-lg:flex">
-				<li>
-					<Button as="link" variant="ghost-black" url="/store">
-						<span>store</span>
-					</Button>
-				</li>
-
-				<li>
-					<Button as="link" variant="ghost-black">
-						<span>setup</span>
-					</Button>
-				</li>
-
-				<li>
-					<Button as="link" variant="ghost-black">
-						<span>about</span>
-					</Button>
-				</li>
-
-				<li>
-					<Button as="link" variant="ghost-black">
-						<span>updates</span>
-					</Button>
-				</li>
+				{#each NavLinks as item}
+					<li>
+						{#if $page.url.pathname.includes(item.url)}
+							<Button as="button" variant="solid-white">
+								<span>{item.label}</span>
+							</Button>
+						{:else}
+							<Button as="link" variant="ghost-black" url={item.url}>
+								<span>{item.label}</span>
+							</Button>
+						{/if}
+					</li>
+				{/each}
 
 				<li>
 					<Button as="button" variant="ghost-black">
@@ -73,6 +87,7 @@
 						<span>cart</span>
 					</Button>
 				</li>
+
 				<li>
 					<Button as="button" variant="ghost-black">
 						<span>menu</span>
