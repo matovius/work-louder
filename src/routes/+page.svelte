@@ -18,14 +18,16 @@
 
 <section id="hero" class="w-full flex justify-center items-center">
 	<div
-		class="w-full h-480 flex flex-col justify-center items-center gap-48 bg-white/20 rounded overflow-hidden relative"
-		style={`
-			background-image: linear-gradient(hsl(0, 0%, 0%, 0.2), hsl(0, 0%, 0%, 0.2)), url(${nomadForHeroSection});
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-			`}
+		class="isolate w-full h-480 flex flex-col justify-center items-center gap-48 bg-black rounded overflow-hidden relative"
 	>
+		<div class="absolute inset-0 w-full h-full -z-10 opacity-60">
+			<img
+				src={nomadForHeroSection}
+				alt="a full shot of the nomad [e]"
+				class="w-full h-full object-cover"
+			/>
+		</div>
+
 		<h1 class="h1 text-center relative">
 			<span>focus.</span>
 			<br />
@@ -66,15 +68,15 @@
 		id="main-product-card"
 		class="w-full flex flex-col tablet-sm:flex-row justify-center items-center gap-24"
 	>
-		<div
-			class="w-full max-w-[53.5rem] h-360 bg-white/10 rounded overflow-hidden"
-			style={`
-				background-image: url(${nomadColorways});
-				background-position: center;
-				background-size: cover;
-				background-repeat: no-repeat;
-				`}
-		/>
+		<div class="w-full max-w-[53.5rem] h-360 bg-white/10 rounded overflow-hidden">
+			<div class="w-full h-full">
+				<img
+					src={nomadColorways}
+					alt="a set of nomad [e] colorways: atomic, atomic purple, charcoal, and chalk"
+					class="w-full h-full object-cover"
+				/>
+			</div>
+		</div>
 		<div
 			class="text-black w-full tablet-sm:max-w-[22.5rem] h-360 flex flex-col gap-24 p-24 rounded overflow-hidden bg-lemon-lime"
 		>
@@ -100,15 +102,15 @@
 		id="small-product-card"
 		class="w-full tablet-sm:max-w-[calc(50%-12px)] tablet-lg:max-w-none laptop:w-[calc(50%-12px)] flex flex-col tablet-lg:flex-row-reverse justify-center items-center gap-24"
 	>
-		<div
-			class="w-full laptop:max-w-[17.5rem] h-360 bg-white/10 rounded overflow-hidden"
-			style={`
-				background-image: url(${creatorMicro});
-				background-position: center;
-				background-size: cover;
-				background-repeat: no-repeat;
-				`}
-		/>
+		<div class="w-full laptop:max-w-[17.5rem] h-360 bg-white/10 rounded overflow-hidden">
+			<div class="w-full h-full">
+				<img
+					src={creatorMicro}
+					alt="the creator micro with twelve buttons and two dials one on its side and one standing up"
+					class="w-full h-full object-cover"
+				/>
+			</div>
+		</div>
 		<div
 			class="text-black w-full tablet-lg:max-w-[19rem] h-360 flex flex-col gap-24 p-24 rounded overflow-hidden bg-white"
 		>
@@ -133,15 +135,15 @@
 		id="small-product-card"
 		class="w-full tablet-sm:max-w-[calc(50%-12px)] tablet-lg:max-w-none laptop:w-[calc(50%-12px)] flex flex-col tablet-lg:flex-row justify-center items-center gap-24"
 	>
-		<div
-			class="w-full laptop:max-w-[17.5rem] h-360 bg-white/10 rounded overflow-hidden"
-			style={`
-				background-image: url(${creatorBoard});
-				background-position: center;
-				background-size: cover;
-				background-repeat: no-repeat;
-				`}
-		/>
+		<div class="w-full laptop:max-w-[17.5rem] h-360 bg-white/10 rounded overflow-hidden">
+			<div class="w-full h-full">
+				<img
+					src={creatorBoard}
+					alt="the creator board with its modular design consisting of a work keeb, a loop pad, and a nano pad"
+					class="w-full h-full object-cover"
+				/>
+			</div>
+		</div>
 		<div
 			class="text-black w-full tablet-lg:max-w-[19rem] h-360 flex flex-col gap-24 p-24 rounded overflow-hidden bg-white"
 		>
@@ -182,15 +184,15 @@
 				</Button>
 			</div>
 		</div>
-		<div
-			class="w-full h-360 bg-white/10 rounded overflow-hidden"
-			style={`
-				background-image: url(${creatorBoardXL});
-				background-position: center;
-				background-size: cover;
-				background-repeat: no-repeat;
-				`}
-		/>
+		<div class="w-full h-360 bg-white/10 rounded overflow-hidden">
+			<div class="w-full h-full">
+				<img
+					src={creatorBoardXL}
+					alt="the creator board XL is similar to the creator board, but with an expanded design with a numpad and an extra space "
+					class="w-full h-full object-cover"
+				/>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -201,15 +203,17 @@
 <section id="extra-ctas" class="w-full flex justify-start items-center flex-wrap gap-24 py-24">
 	<div
 		id="storefront-cta"
-		class="w-608 h-360 flex flex-col justify-center items-center gap-24 p-24 rounded overflow-hidden bg-white/10"
-		style={`
-			background-image: linear-gradient(hsl(0, 0%, 0%, 0.4), hsl(0, 0%, 0%, 0.4)), url(${floatingKeycaps});
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-			`}
+		class="isolate w-full tablet-sm:max-w-[calc(50%-12px)] h-360 flex flex-col justify-center items-center gap-24 p-24 rounded overflow-hidden bg-black relative"
 	>
-		<h2 class="h2">our products</h2>
+		<div class="absolute inset-0 -z-10 w-full h-full opacity-40">
+			<img
+				src={floatingKeycaps}
+				alt="a bunch of beautiful keycaps floating in mid-air"
+				class="w-full h-full object-cover"
+			/>
+		</div>
+
+		<h2 class="h2 text-center">our products</h2>
 		<p class="paragraph text-center">
 			for all the keyboards, deskmats, keycaps, modules, collabs, and other merchandise.
 		</p>
@@ -217,17 +221,20 @@
 			<span>head to the store</span>
 		</Button>
 	</div>
+
 	<div
 		id="wrkshop-cta"
-		class="w-608 h-360 flex flex-col justify-center items-center gap-24 p-24 rounded overflow-hidden bg-white/10"
-		style={`
-			background-image: linear-gradient(hsl(0, 0%, 0%, 0.4), hsl(0, 0%, 0%, 0.4)), url(${clothingModel});
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-			`}
+		class="isolate w-full tablet-sm:max-w-[calc(50%-12px)] h-360 flex flex-col justify-center items-center gap-24 p-24 rounded overflow-hidden bg-black relative"
 	>
-		<h2 class="h2">wrk.shop</h2>
+		<div class="absolute inset-0 -z-10 w-full h-full opacity-40">
+			<img
+				src={clothingModel}
+				alt="a beautiful feminine model wearing some beautiful leisure-wear"
+				class="w-full h-full object-cover"
+			/>
+		</div>
+
+		<h2 class="h2 text-center">wrk.shop</h2>
 		<p class="paragraph text-center">where your renders become reality</p>
 		<Button as="button" variant="translucent-black">
 			<span>coming soon</span>
