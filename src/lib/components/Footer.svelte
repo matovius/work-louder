@@ -25,7 +25,7 @@
 			<div class="w-full flex flex-col gap-24">
 				<ul class="w-full flex flex-row justify-center items-center flex-wrap gap-24">
 					<li>
-						<a href="/" class="paragraph text-white/60">store</a>
+						<a href="/store" class="paragraph text-white/60">store</a>
 					</li>
 					<li>
 						<a href="/" class="paragraph text-white/60">setup</a>

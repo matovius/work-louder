@@ -213,7 +213,7 @@
 		<p class="paragraph text-center">
 			for all the keyboards, deskmats, keycaps, modules, collabs, and other merchandise.
 		</p>
-		<Button as="link" variant="solid-primary">
+		<Button as="link" variant="solid-primary" url="/store">
 			<span>head to the store</span>
 		</Button>
 	</div>
