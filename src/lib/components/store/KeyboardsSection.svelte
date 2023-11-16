@@ -17,7 +17,7 @@
 		<a
 			href="/"
 			id="product-card__wide"
-			class="w-full min-w-full flex flex-col justify-center items-center gap-24 outline outline-2 outline-transparent outline-offset-4 focus-visible:outline-current rounded"
+			class="w-full min-w-full flex flex-col justify-center items-center gap-24 p-24 hover:bg-white/10 outline outline-2 outline-transparent outline-offset-4 focus-visible:outline-current rounded"
 		>
 			<div
 				class="w-full h-360 flex justify-center items-center bg-white/10 rounded overflow-hidden relative"
