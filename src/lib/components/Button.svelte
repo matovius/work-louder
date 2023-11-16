@@ -15,11 +15,11 @@
 </script>
 
 {#if as === 'button'}
-	<button class={`button ${variant}`}>
+	<button class={`button ${variant}`} on:click>
 		<slot />
 	</button>
 {:else if as === 'link'}
-	<a href={url} class={`button ${variant}`}>
+	<a href={url} class={`button ${variant}`} on:click>
 		<slot />
 	</a>
 {/if}
