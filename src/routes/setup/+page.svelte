@@ -201,31 +201,13 @@
 
 	<div
 		id="discord-cta"
-		class="w-full tablet-lg:max-w-[calc(50%-12px)] tablet-lg:h-360 flex flex-col justify-center items-center gap-24 p-24 rounded bg-white/10"
-		style={`
-      background-image: linear-gradient(hsl(0, 0%, 0%, 0.4), hsl(0, 0%, 0%, 0.4)), url(${nomadPerspective});
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    `}
-	>
-		<h3 class="h3 text-center">the power of our community</h3>
-		<p class="paragraph text-center">
-			join our passionate community of creators to get build help, project ideas, and be part of the
-			development of new modules for your creator board.
-		</p>
-		<Button as="button" variant="solid-white">join the discord</Button>
-	</div>
-
-	<div
-		id="discord-cta"
-		class="isolate w-full tablet-lg:max-w-[calc(50%-12px)] tablet-lg:h-360 flex flex-col justify-center items-center gap-24 p-24 rounded overflow-hidden relative"
+		class="isolate w-full tablet-lg:max-w-[calc(50%-12px)] tablet-lg:h-360 flex flex-col justify-center items-center gap-24 p-24 bg-black rounded overflow-hidden relative"
 	>
 		<div class="absolute inset-0 w-full h-full -z-10 opacity-40">
 			<img
 				src={nomadPerspective}
 				alt="a shot of the nomad [e] from the top right corner"
-				class="w-full h-full"
+				class="w-full h-full object-cover"
 			/>
 		</div>
 
