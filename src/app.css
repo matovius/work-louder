@@ -36,6 +36,10 @@
 	@apply text-[.75rem] leading-4 font-inter font-medium;
 }
 
+.input {
+	@apply w-full px-24 py-8 border border-black/10 bg-transparent rounded placeholder:text-black/40 hover:placeholder:text-black/80 focus:placeholder:text-black/80 outline outline-2 outline-transparent outline-offset-2 focus-visible:outline-black;
+}
+
 .button {
 	@apply font-inter px-24 py-8 inline-block rounded-full outline outline-2 outline-transparent outline-offset-2 focus-visible:outline-current;
 }
