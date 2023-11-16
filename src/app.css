@@ -53,7 +53,7 @@
 }
 
 .button.solid-primary {
-	@apply text-black bg-lemon-lime hover:bg-lemon-lime/80 focus:bg-lemon-lime/80;
+	@apply text-black bg-lemon-lime hover:bg-lemon-lime/80 focus:bg-lemon-lime/80 focus-visible:outline-lemon-lime;
 }
 
 .button.translucent-white {
