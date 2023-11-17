@@ -182,7 +182,7 @@
 	</ul>
 </section>
 
-<div
+<section
 	id="extra-ctas"
 	class="w-full flex flex-row flex-wrap justify-center items-center gap-24 py-24"
 >
@@ -218,4 +218,4 @@
 		</p>
 		<Button as="button" variant="solid-white">join the discord</Button>
 	</div>
-</div>
+</section>
