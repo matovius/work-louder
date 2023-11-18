@@ -1,6 +1,8 @@
 <script lang="ts">
-	import Button from '$lib/components/Button.svelte';
 	import InfiniteCarousel from '$lib/components/InfiniteCarousel.svelte';
+
+	import type { Product } from '../product-card/ProductData';
+	import ProductCard from '../product-card/ProductCard.svelte';
 
 	import xlBase from '$lib/images/xl-base.png';
 	import loopPad from '$lib/images/loop-pad.png';
@@ -8,6 +10,63 @@
 	import numPad from '$lib/images/num-pad.png';
 	import microPCB from '$lib/images/micro-pcb.png';
 	import microBase from '$lib/images/micro-base.png';
+
+	const category = 'module';
+
+	let ModuleProducts: Product[] = [
+		{
+			size: 'large',
+			name: 'XL base',
+			category: category,
+			price: '79',
+			imgSrc: xlBase,
+			imgAlt: 'the XL base has a slew of threaded holes to allow stuff to be mounted on top of it'
+		},
+		{
+			size: 'medium',
+			name: 'loop pad',
+			category: category,
+			price: '99',
+			imgSrc: loopPad,
+			imgAlt: 'the loop pad has three dials and nine buttons'
+		},
+		{
+			size: 'medium',
+			name: 'nano pad',
+			category: category,
+			price: '49.99',
+			imgSrc: nanoPad,
+			imgAlt: 'the nano pad has one dials and two programmable buttons'
+		},
+		{
+			size: 'small',
+			name: 'num pad',
+			category: category,
+			price: '89',
+			imgSrc: numPad,
+			imgAlt:
+				'the num pad has buttons for all the ten numbers, and extras for mathematical operations on the right and bottom',
+			blueFlairs: ['pre-order only']
+		},
+		{
+			size: 'small',
+			name: 'micro pcb',
+			category: category,
+			price: '59',
+			imgSrc: microPCB,
+			imgAlt:
+				"the micro pcb has twelve programmable buttons and two dials, one on it's side and the other standing up",
+			orangeFlairs: ['out of stock']
+		},
+		{
+			size: 'small',
+			name: 'micro base',
+			category: category,
+			price: '59',
+			imgSrc: microBase,
+			imgAlt: 'the micro base can be used to mount the micro pcb or the num pad to a base'
+		}
+	];
 </script>
 
 <section id="modules" class="w-full flex flex-col justify-center items-center gap-24 py-24">
@@ -16,202 +75,20 @@
 	</InfiniteCarousel>
 
 	<div class="w-full flex flex-row flex-wrap justify-start items-start gap-24">
-		<div
-			id="product-card__large"
-			class="w-full min-w-full flex flex-col justify-center items-center gap-24 outline outline-2 outline-transparent outline-offset-4 focus-visible:outline-current rounded"
-		>
-			<div
-				class="w-full h-360 flex justify-center items-center bg-white/10 rounded overflow-hidden relative"
-				style={`
-					background-image: url(${xlBase});
-					background-position: 50% 45%;
-					background-size: cover;
-					background-repeat: no-repeat;
-					`}
-			>
-				<div id="flair-wrapper" class="absolute top-0 left-0 p-24 hidden">
-					<div id="flair-chip" class="flair-chip blue-chip">
-						<span>pre-order only</span>
-					</div>
-				</div>
-				<div id="cart-cta-wrapper" class="absolute bottom-0 right-0 p-24">
-					<Button as="button" variant="solid-primary">
-						<span>add to cart</span>
-					</Button>
-				</div>
-			</div>
-			<div class="w-full flex flex-row justify-between items-center">
-				<div class="w-full flex flex-col gap-12">
-					<h3 class="h3">XL base</h3>
-					<span class="h5 text-white/60">module</span>
-				</div>
-				<span class="h3 text-white/60">$79</span>
-			</div>
-		</div>
-
-		<div
-			id="product-card__medium"
-			class="w-full tablet-lg:max-w-[calc(50%-12px)] flex flex-col justify-center items-center gap-24"
-		>
-			<div
-				class="w-full h-360 flex justify-center items-center bg-white/10 rounded overflow-hidden relative"
-				style={`
-					background-image: url(${loopPad});
-					background-position: center;
-					background-size: cover;
-					background-repeat: no-repeat;
-					`}
-			>
-				<div id="flair-wrapper" class="absolute top-0 left-0 p-24 hidden">
-					<div id="flair-chip" class="flair-chip blue-chip">
-						<span>pre-order only</span>
-					</div>
-				</div>
-				<div id="cart-cta-wrapper" class="absolute bottom-0 right-0 p-24">
-					<Button as="button" variant="solid-primary">
-						<span>add to cart</span>
-					</Button>
-				</div>
-			</div>
-			<div class="w-full flex flex-row justify-between items-center">
-				<div class="w-full flex flex-col gap-12">
-					<h3 class="h3">loop pad</h3>
-					<span class="h5 text-white/60">module</span>
-				</div>
-				<span class="h3 text-white/60">$99</span>
-			</div>
-		</div>
-
-		<div
-			id="product-card__medium"
-			class="w-full tablet-lg:max-w-[calc(50%-12px)] flex flex-col justify-center items-center gap-24"
-		>
-			<div
-				class="w-full h-360 flex justify-center items-center bg-white/10 rounded overflow-hidden relative"
-				style={`
-					background-image: url(${nanoPad});
-					background-position: center;
-					background-size: cover;
-					background-repeat: no-repeat;
-					`}
-			>
-				<div id="flair-wrapper" class="absolute top-0 left-0 p-24 hidden">
-					<div id="flair-chip" class="flair-chip blue-chip">
-						<span>pre-order only</span>
-					</div>
-				</div>
-				<div id="cart-cta-wrapper" class="absolute bottom-0 right-0 p-24">
-					<Button as="button" variant="solid-primary">
-						<span>add to cart</span>
-					</Button>
-				</div>
-			</div>
-			<div class="w-full flex flex-row justify-between items-center">
-				<div class="w-full flex flex-col gap-12">
-					<h3 class="h3">nano pad</h3>
-					<span class="h5 text-white/60">module</span>
-				</div>
-				<span class="h3 text-white/60">$49.99</span>
-			</div>
-		</div>
-
-		<div
-			id="product-card__small"
-			class="w-full tablet-sm:max-w-[calc(50%-12px)] laptop:max-w-[calc(25%-12px)] flex flex-col justify-center items-center gap-24"
-		>
-			<div
-				class="w-full h-360 flex justify-center items-center bg-white/10 rounded overflow-hidden relative"
-				style={`
-					background-image: url(${numPad});
-					background-position: center;
-					background-size: cover;
-					background-repeat: no-repeat;
-					`}
-			>
-				<div id="flair-wrapper" class="absolute top-0 left-0 p-24">
-					<div id="flair-chip" class="flair-chip blue-chip">
-						<span>pre-order only</span>
-					</div>
-				</div>
-				<div id="cart-cta-wrapper" class="absolute bottom-0 right-0 p-24">
-					<Button as="button" variant="solid-primary">
-						<span>add to cart</span>
-					</Button>
-				</div>
-			</div>
-			<div class="w-full flex flex-row justify-between items-center">
-				<div class="w-full flex flex-col gap-12">
-					<h3 class="h3">num pad</h3>
-					<span class="h5 text-white/60">module</span>
-				</div>
-				<span class="h3 text-white/60">$89</span>
-			</div>
-		</div>
-
-		<div
-			id="product-card__small"
-			class="w-full tablet-sm:max-w-[calc(50%-12px)] laptop:max-w-[calc(25%-12px)] flex flex-col justify-center items-center gap-24"
-		>
-			<div
-				class="w-full h-360 flex justify-center items-center bg-white/10 rounded overflow-hidden relative"
-				style={`
-					background-image: url(${microPCB});
-					background-position: center;
-					background-size: cover;
-					background-repeat: no-repeat;
-					`}
-			>
-				<div id="flair-wrapper" class="absolute top-0 left-0 p-24">
-					<div id="flair-chip" class="flair-chip orange-chip">
-						<span>out of stock</span>
-					</div>
-				</div>
-				<div id="cart-cta-wrapper" class="absolute bottom-0 right-0 p-24">
-					<Button as="button" variant="solid-primary">
-						<span>add to cart</span>
-					</Button>
-				</div>
-			</div>
-			<div class="w-full flex flex-row justify-between items-center">
-				<div class="w-full flex flex-col gap-12">
-					<h3 class="h3">micro pcb</h3>
-					<span class="h5 text-white/60">module</span>
-				</div>
-				<span class="h3 text-white/60">$99</span>
-			</div>
-		</div>
-
-		<div
-			id="product-card__small"
-			class="w-full tablet-sm:max-w-[calc(50%-12px)] laptop:max-w-[calc(25%-12px)] flex flex-col justify-center items-center gap-24"
-		>
-			<div
-				class="w-full h-360 flex justify-center items-center bg-white/10 rounded overflow-hidden relative"
-				style={`
-					background-image: url(${microBase});
-					background-position: center;
-					background-size: cover;
-					background-repeat: no-repeat;
-					`}
-			>
-				<div id="flair-wrapper" class="absolute top-0 left-0 p-24 hidden">
-					<div id="flair-chip" class="flair-chip blue-chip">
-						<span>pre-order only</span>
-					</div>
-				</div>
-				<div id="cart-cta-wrapper" class="absolute bottom-0 right-0 p-24">
-					<Button as="button" variant="solid-primary">
-						<span>add to cart</span>
-					</Button>
-				</div>
-			</div>
-			<div class="w-full flex flex-row justify-between items-center">
-				<div class="w-full flex flex-col gap-12">
-					<h3 class="h3">micro base</h3>
-					<span class="h5 text-white/60">module</span>
-				</div>
-				<span class="h3 text-white/60">$59</span>
-			</div>
-		</div>
+		{#each ModuleProducts as Product}
+			<ProductCard
+				size={Product.size}
+				name={Product.name}
+				category={Product.category}
+				price={Product.price}
+				imgSrc={Product.imgSrc}
+				imgAlt={Product.imgAlt}
+				greenFlairs={Product.greenFlairs}
+				orangeFlairs={Product.orangeFlairs}
+				grayFlairs={Product.grayFlairs}
+				blueFlairs={Product.blueFlairs}
+				pinkFlairs={Product.pinkFlairs}
+			/>
+		{/each}
 	</div>
 </section>

@@ -1,6 +1,8 @@
 <script lang="ts">
-	import Button from '$lib/components/Button.svelte';
 	import InfiniteCarousel from '$lib/components/InfiniteCarousel.svelte';
+
+	import type { Product } from '../product-card/ProductData';
+	import ProductCard from '../product-card/ProductCard.svelte';
 
 	import wrkBlind from '$lib/images/wrk-blind.png';
 	import wrkCartridge from '$lib/images/wrk-cartridge.png';
@@ -9,6 +11,69 @@
 	import wrkIcon from '$lib/images/wrk-icon.png';
 	import wrkLegend from '$lib/images/wrk-legend.png';
 	import wrkPure from '$lib/images/wrk-pure.png';
+
+	const category = 'keycaps';
+
+	let KeycapsProducts: Product[] = [
+		{
+			size: 'large',
+			name: 'wrk. cartridge',
+			category: category,
+			price: '99',
+			imgSrc: wrkCartridge,
+			imgAlt: 'the XL base has a slew of threaded holes to allow stuff to be mounted on top of it'
+		},
+		{
+			size: 'medium',
+			name: 'wrk. icon',
+			category: category,
+			price: '54',
+			imgSrc: wrkIcon,
+			imgAlt: 'the loop pad has three dials and nine buttons'
+		},
+		{
+			size: 'medium',
+			name: 'wrk. pure',
+			category: category,
+			price: '54',
+			imgSrc: wrkPure,
+			imgAlt: 'the nano pad has one dials and two programmable buttons'
+		},
+		{
+			size: 'small',
+			name: 'wrk. blind',
+			category: category,
+			price: '44',
+			imgSrc: wrkBlind,
+			imgAlt:
+				'the num pad has buttons for all the ten numbers, and extras for mathematical operations on the right and bottom'
+		},
+		{
+			size: 'small',
+			name: 'wrk. legend',
+			category: category,
+			price: '54',
+			imgSrc: wrkLegend,
+			imgAlt:
+				"the micro pcb has twelve programmable buttons and two dials, one on it's side and the other standing up"
+		},
+		{
+			size: 'small',
+			name: 'wrk. daily',
+			category: category,
+			price: '54',
+			imgSrc: wrkDaily,
+			imgAlt: 'the micro base can be used to mount the micro pcb or the num pad to a base'
+		},
+		{
+			size: 'small',
+			name: 'wrk. dial',
+			category: category,
+			price: '4.99',
+			imgSrc: wrkDial,
+			imgAlt: 'the micro base can be used to mount the micro pcb or the num pad to a base'
+		}
+	];
 </script>
 
 <section id="keycaps" class="w-full flex flex-col justify-center items-center gap-24 py-24">
@@ -17,235 +82,20 @@
 	</InfiniteCarousel>
 
 	<div class="w-full flex flex-row flex-wrap justify-start items-start gap-24">
-		<div
-			id="product-card__large"
-			class="w-full min-w-full flex flex-col justify-center items-center gap-24 outline outline-2 outline-transparent outline-offset-4 focus-visible:outline-current rounded"
-		>
-			<div
-				class="w-full h-360 flex justify-center items-center bg-white/10 rounded overflow-hidden relative"
-				style={`
-					background-image: url(${wrkCartridge});
-					background-position: center;
-					background-size: cover;
-					background-repeat: no-repeat;
-					`}
-			>
-				<div id="flair-wrapper" class="absolute top-0 left-0 p-24 hidden">
-					<div id="flair-chip" class="flair-chip blue-chip">
-						<span>pre-order only</span>
-					</div>
-				</div>
-				<div id="cart-cta-wrapper" class="absolute bottom-0 right-0 p-24">
-					<Button as="button" variant="solid-primary">
-						<span>add to cart</span>
-					</Button>
-				</div>
-			</div>
-			<div class="w-full flex flex-row justify-between items-center">
-				<div class="w-full flex flex-col gap-12">
-					<h3 class="h3">wrk. cartridge</h3>
-					<span class="h5 text-white/60">keycaps</span>
-				</div>
-				<span class="h3 text-white/60">$99</span>
-			</div>
-		</div>
-
-		<div
-			id="product-card__medium"
-			class="w-full tablet-lg:max-w-[calc(50%-12px)] flex flex-col justify-center items-center gap-24"
-		>
-			<div
-				class="w-full h-360 flex justify-center items-center bg-white/10 rounded overflow-hidden relative"
-				style={`
-					background-image: url(${wrkIcon});
-					background-position: center;
-					background-size: cover;
-					background-repeat: no-repeat;
-					`}
-			>
-				<div id="flair-wrapper" class="absolute top-0 left-0 p-24 hidden">
-					<div id="flair-chip" class="flair-chip blue-chip">
-						<span>pre-order only</span>
-					</div>
-				</div>
-				<div id="cart-cta-wrapper" class="absolute bottom-0 right-0 p-24">
-					<Button as="button" variant="solid-primary">
-						<span>add to cart</span>
-					</Button>
-				</div>
-			</div>
-			<div class="w-full flex flex-row justify-between items-center">
-				<div class="w-full flex flex-col gap-12">
-					<h3 class="h3">wrk. icon</h3>
-					<span class="h5 text-white/60">keycaps</span>
-				</div>
-				<span class="h3 text-white/60">$54</span>
-			</div>
-		</div>
-
-		<div
-			id="product-card__medium"
-			class="w-full tablet-lg:max-w-[calc(50%-12px)] flex flex-col justify-center items-center gap-24"
-		>
-			<div
-				class="w-full h-360 flex justify-center items-center bg-white/10 rounded overflow-hidden relative"
-				style={`
-					background-image: url(${wrkPure});
-					background-position: center;
-					background-size: cover;
-					background-repeat: no-repeat;
-					`}
-			>
-				<div id="flair-wrapper" class="absolute top-0 left-0 p-24 hidden">
-					<div id="flair-chip" class="flair-chip blue-chip">
-						<span>pre-order only</span>
-					</div>
-				</div>
-				<div id="cart-cta-wrapper" class="absolute bottom-0 right-0 p-24">
-					<Button as="button" variant="solid-primary">
-						<span>add to cart</span>
-					</Button>
-				</div>
-			</div>
-			<div class="w-full flex flex-row justify-between items-center">
-				<div class="w-full flex flex-col gap-12">
-					<h3 class="h3">wrk. pure</h3>
-					<span class="h5 text-white/60">keycaps</span>
-				</div>
-				<span class="h3 text-white/60">$54</span>
-			</div>
-		</div>
-
-		<div
-			id="product-card__small"
-			class="w-full tablet-sm:max-w-[calc(50%-12px)] laptop:max-w-[calc(25%-18px)] flex flex-col justify-center items-center gap-24"
-		>
-			<div
-				class="w-full h-360 flex justify-center items-center bg-white/10 rounded overflow-hidden relative"
-				style={`
-					background-image: url(${wrkBlind});
-					background-position: center;
-					background-size: cover;
-					background-repeat: no-repeat;
-					`}
-			>
-				<div id="flair-wrapper" class="absolute top-0 left-0 p-24 hidden">
-					<div id="flair-chip" class="flair-chip blue-chip">
-						<span>pre-order only</span>
-					</div>
-				</div>
-				<div id="cart-cta-wrapper" class="absolute bottom-0 right-0 p-24">
-					<Button as="button" variant="solid-primary">
-						<span>add to cart</span>
-					</Button>
-				</div>
-			</div>
-			<div class="w-full flex flex-row justify-between items-center">
-				<div class="w-full flex flex-col gap-12">
-					<h3 class="h3">wrk. blind</h3>
-					<span class="h5 text-white/60">keycaps</span>
-				</div>
-				<span class="h3 text-white/60">$44</span>
-			</div>
-		</div>
-
-		<div
-			id="product-card__small"
-			class="w-full tablet-sm:max-w-[calc(50%-12px)] laptop:max-w-[calc(25%-18px)] flex flex-col justify-center items-center gap-24"
-		>
-			<div
-				class="w-full h-360 flex justify-center items-center bg-white/10 rounded overflow-hidden relative"
-				style={`
-					background-image: url(${wrkLegend});
-					background-position: center;
-					background-size: cover;
-					background-repeat: no-repeat;
-					`}
-			>
-				<div id="flair-wrapper" class="absolute top-0 left-0 p-24 hidden">
-					<div id="flair-chip" class="flair-chip orange-chip">
-						<span>out of stock</span>
-					</div>
-				</div>
-				<div id="cart-cta-wrapper" class="absolute bottom-0 right-0 p-24">
-					<Button as="button" variant="solid-primary">
-						<span>add to cart</span>
-					</Button>
-				</div>
-			</div>
-			<div class="w-full flex flex-row justify-between items-center">
-				<div class="w-full flex flex-col gap-12">
-					<h3 class="h3">wrk. legend</h3>
-					<span class="h5 text-white/60">keycaps</span>
-				</div>
-				<span class="h3 text-white/60">$54</span>
-			</div>
-		</div>
-
-		<div
-			id="product-card__small"
-			class="w-full tablet-sm:max-w-[calc(50%-12px)] laptop:max-w-[calc(25%-18px)] flex flex-col justify-center items-center gap-24"
-		>
-			<div
-				class="w-full h-360 flex justify-center items-center bg-white/10 rounded overflow-hidden relative"
-				style={`
-					background-image: url(${wrkDaily});
-					background-position: center;
-					background-size: cover;
-					background-repeat: no-repeat;
-					`}
-			>
-				<div id="flair-wrapper" class="absolute top-0 left-0 p-24 hidden">
-					<div id="flair-chip" class="flair-chip blue-chip">
-						<span>pre-order only</span>
-					</div>
-				</div>
-				<div id="cart-cta-wrapper" class="absolute bottom-0 right-0 p-24">
-					<Button as="button" variant="solid-primary">
-						<span>add to cart</span>
-					</Button>
-				</div>
-			</div>
-			<div class="w-full flex flex-row justify-between items-center">
-				<div class="w-full flex flex-col gap-12">
-					<h3 class="h3">wrk. daily</h3>
-					<span class="h5 text-white/60">keycaps</span>
-				</div>
-				<span class="h3 text-white/60">$54</span>
-			</div>
-		</div>
-
-		<div
-			id="product-card__small"
-			class="w-full tablet-sm:max-w-[calc(50%-12px)] laptop:max-w-[calc(25%-18px)] flex flex-col justify-center items-center gap-24"
-		>
-			<div
-				class="w-full h-360 flex justify-center items-center bg-white/10 rounded overflow-hidden relative"
-				style={`
-					background-image: url(${wrkDial});
-					background-position: center;
-					background-size: cover;
-					background-repeat: no-repeat;
-					`}
-			>
-				<div id="flair-wrapper" class="absolute top-0 left-0 p-24 hidden">
-					<div id="flair-chip" class="flair-chip blue-chip">
-						<span>pre-order only</span>
-					</div>
-				</div>
-				<div id="cart-cta-wrapper" class="absolute bottom-0 right-0 p-24">
-					<Button as="button" variant="solid-primary">
-						<span>add to cart</span>
-					</Button>
-				</div>
-			</div>
-			<div class="w-full flex flex-row justify-between items-center">
-				<div class="w-full flex flex-col gap-12">
-					<h3 class="h3">wrk. dial</h3>
-					<span class="h5 text-white/60">keycaps</span>
-				</div>
-				<span class="h3 text-white/60">$4.99</span>
-			</div>
-		</div>
+		{#each KeycapsProducts as Product}
+			<ProductCard
+				size={Product.size}
+				name={Product.name}
+				category={Product.category}
+				price={Product.price}
+				imgSrc={Product.imgSrc}
+				imgAlt={Product.imgAlt}
+				greenFlairs={Product.greenFlairs}
+				orangeFlairs={Product.orangeFlairs}
+				grayFlairs={Product.grayFlairs}
+				blueFlairs={Product.blueFlairs}
+				pinkFlairs={Product.pinkFlairs}
+			/>
+		{/each}
 	</div>
 </section>
