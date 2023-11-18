@@ -28,12 +28,9 @@
 		</h3>
 	</div>
 
-	<ul class="w-full flex flex-row justify-center items-start flex-wrap gap-48">
-		<li>
-			<div
-				id="step-one"
-				class="w-full max-w-[30rem] flex flex-col justify-start items-start gap-24"
-			>
+	<ul class="w-full max-w-[52.5rem] flex flex-row justify-center items-start flex-wrap gap-48">
+		<li class="w-full tablet-sm:max-w-[calc(50%-24px)]">
+			<div id="step-one" class="w-full flex flex-col justify-start items-start gap-24">
 				<div class="flair-chip gray-chip">
 					<span>01</span>
 				</div>
@@ -52,11 +49,8 @@
 			</div>
 		</li>
 
-		<li>
-			<div
-				id="step-two"
-				class="w-full max-w-[30rem] flex flex-col justify-start items-start gap-24"
-			>
+		<li class="w-full tablet-sm:max-w-[calc(50%-24px)]">
+			<div id="step-two" class="w-full flex flex-col justify-start items-start gap-24">
 				<div class="flair-chip gray-chip">
 					<span>02</span>
 				</div>
@@ -87,12 +81,9 @@
 		</h3>
 	</div>
 
-	<ul class="w-full flex flex-row justify-center items-start flex-wrap gap-48">
-		<li>
-			<div
-				id="step-one"
-				class="w-full max-w-[30rem] flex flex-col justify-start items-start gap-24"
-			>
+	<ul class="w-full max-w-[52.5rem] flex flex-row justify-center items-start flex-wrap gap-48">
+		<li class="w-full tablet-sm:max-w-[calc(50%-24px)]">
+			<div id="step-one" class="w-full flex flex-col justify-start items-start gap-24">
 				<div class="flair-chip gray-chip">
 					<span>01</span>
 				</div>
@@ -112,11 +103,8 @@
 			</div>
 		</li>
 
-		<li>
-			<div
-				id="step-two"
-				class="w-full max-w-[30rem] flex flex-col justify-start items-start gap-24"
-			>
+		<li class="w-full tablet-sm:max-w-[calc(50%-24px)]">
+			<div id="step-two" class="w-full flex flex-col justify-start items-start gap-24">
 				<div class="flair-chip gray-chip">
 					<span>02</span>
 				</div>
@@ -135,11 +123,8 @@
 			</div>
 		</li>
 
-		<li>
-			<div
-				id="step-three"
-				class="w-full max-w-[30rem] flex flex-col justify-start items-start gap-24"
-			>
+		<li class="w-full tablet-sm:max-w-[calc(50%-24px)]">
+			<div id="step-three" class="w-full flex flex-col justify-start items-start gap-24">
 				<div class="flair-chip gray-chip">
 					<span>03</span>
 				</div>
@@ -157,11 +142,8 @@
 			</div>
 		</li>
 
-		<li>
-			<div
-				id="step-four"
-				class="w-full max-w-[30rem] flex flex-col justify-start items-start gap-24"
-			>
+		<li class="w-full tablet-sm:max-w-[calc(50%-24px)]">
+			<div id="step-four" class="w-full flex flex-col justify-start items-start gap-24">
 				<div class="flair-chip gray-chip">
 					<span>04</span>
 				</div>
