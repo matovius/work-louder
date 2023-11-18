@@ -77,7 +77,7 @@
 }
 
 .flair-chip {
-	@apply font-inter text-[.75rem] leading-4 font-medium w-fit px-12 py-8 rounded-full flex justify-center items-center;
+	@apply font-inter text-[.75rem] leading-4 font-medium w-fit px-12 py-8 rounded-full flex justify-center items-center pointer-events-none select-none;
 }
 
 .flair-chip.green-chip {
