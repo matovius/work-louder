@@ -39,7 +39,7 @@
 				<Asterisk />
 			</div>
 		</h1>
-		<Button as="link" variant="solid-primary">
+		<Button as="link" url="/store/nomad-e" variant="solid-primary">
 			<span class="paragraph">discover the nomad</span>
 		</Button>
 		<div
@@ -92,7 +92,7 @@
 				</p>
 			</div>
 			<div class="w-full">
-				<Button as="button" variant="solid-white">
+				<Button as="link" url="/store/nomad-e" variant="solid-white">
 					<span>explore</span>
 				</Button>
 			</div>
