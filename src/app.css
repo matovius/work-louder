@@ -40,6 +40,10 @@
 	@apply w-full px-24 py-8 border border-black/10 bg-transparent rounded placeholder:text-black/40 hover:placeholder:text-black/80 focus:placeholder:text-black/80 outline outline-2 outline-transparent outline-offset-2 focus-visible:outline-black;
 }
 
+.link {
+	@apply text-[1rem] leading-6 font-inter text-white/60 hover:text-white inline-block px-12 py-4 rounded-full outline outline-2 outline-transparent outline-offset-2 focus-visible:outline-current;
+}
+
 .button {
 	@apply font-inter px-24 py-8 inline-block rounded-full outline outline-2 outline-transparent outline-offset-2 focus-visible:outline-current;
 }
