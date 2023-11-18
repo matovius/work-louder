@@ -111,7 +111,7 @@
 	<a
 		href={url}
 		id="small"
-		class="isolate w-full tablet-sm:max-w-[calc(50%-18px)] laptop:max-w-[calc(25%-12px)] flex flex-col justify-center items-center gap-24 p-12 pb-24 hover:bg-white/5 rounded-t-[32px] rounded-b relative outline outline-2 outline-transparent outline-offset-4 focus-visible:outline-current"
+		class="isolate w-full tablet-sm:max-w-[calc(50%-12px)] laptop:max-w-[calc(25%-18px)] flex flex-col justify-center items-center gap-24 p-12 pb-24 hover:bg-white/5 rounded-t-[32px] rounded-b relative outline outline-2 outline-transparent outline-offset-4 focus-visible:outline-current"
 	>
 		<div
 			id="flairs"
