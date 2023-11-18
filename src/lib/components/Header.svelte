@@ -1,33 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import Button from './Button.svelte';
+	import { NavLinks } from './Links';
 
 	import WlLogoFull from './icons/WLLogoFull.svelte';
 	import WlLogoShort from './icons/WLLogoShort.svelte';
-
-	interface NavLink {
-		label: string;
-		url: string;
-	}
-
-	const NavLinks: NavLink[] = [
-		{
-			label: 'store',
-			url: '/store'
-		},
-		{
-			label: 'setup',
-			url: '/setup'
-		},
-		{
-			label: 'about',
-			url: '/about'
-		},
-		{
-			label: 'updates',
-			url: '/updates'
-		}
-	];
 
 	let NavModal: HTMLDialogElement;
 	let navModalOpen: boolean = false;
