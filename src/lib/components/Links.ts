@@ -40,7 +40,7 @@ export const SocialLinks: Link[] = [
 		url: 'https://threads.net/worklouder'
 	},
 	{
-		label: 'twitter/x',
+		label: 'discord',
 		url: 'https://discord.com/worklouder'
 	}
 ];
