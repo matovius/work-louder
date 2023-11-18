@@ -45,19 +45,19 @@
 }
 
 .button {
-	@apply font-inter px-24 py-8 inline-block rounded-full outline outline-2 outline-transparent outline-offset-2 focus-visible:outline-current;
+	@apply font-inter px-24 py-8 inline-block rounded-full border border-solid border-transparent outline outline-2 outline-transparent outline-offset-2 focus-visible:outline-current;
 }
 
 .button.solid-white {
-	@apply text-black bg-white hover:bg-white/80 focus:bg-white/80;
+	@apply text-black bg-white hover:bg-white/80 focus:bg-white/80 border-black/10;
 }
 
 .button.solid-black {
-	@apply text-white bg-black hover:bg-black/80 focus:bg-black/80;
+	@apply text-white bg-black hover:bg-black/80 focus:bg-black/80 border-white/10;
 }
 
 .button.solid-primary {
-	@apply text-black bg-lemon-lime hover:bg-lemon-lime/80 focus:bg-lemon-lime/80 focus-visible:outline-lemon-lime;
+	@apply text-black bg-lemon-lime hover:bg-lemon-lime/80 focus:bg-lemon-lime/80 border-lemon-lime/10;
 }
 
 .button.translucent-white {
