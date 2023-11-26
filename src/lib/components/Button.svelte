@@ -12,10 +12,11 @@
 
 	export let as: 'button' | 'link';
 	export let url: string = '/';
+	export let isDisabled: boolean = false;
 </script>
 
 {#if as === 'button'}
-	<button class={`button ${variant}`} on:click>
+	<button class={`button ${variant}`} disabled={isDisabled} on:click>
 		<slot />
 	</button>
 {:else if as === 'link'}
