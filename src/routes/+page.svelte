@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Button from '$lib/components/Button.svelte';
-	import InfiniteCarousel from '$lib/components/InfiniteCarousel.svelte';
+	import Marquee from '$lib/components/Marquee.svelte';
 	import { Asterisk } from 'lucide-svelte';
 
 	import nomadForHeroSection from '$lib/images/nomad-for-hero-section.png';
@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-	<title>work_louder</title>
+	<title>work_louder, inc.</title>
 </svelte:head>
 
 <section id="hero" class="w-full flex justify-center items-center">
@@ -56,9 +56,9 @@
 	</div>
 </section>
 
-<InfiniteCarousel animationDuration="slow">
+<Marquee animationDuration="slow">
 	<span>know productivity, efficiency, passion, and creativity with no limits.</span>
-</InfiniteCarousel>
+</Marquee>
 
 <section
 	id="featured-products"
@@ -196,9 +196,9 @@
 	</div>
 </section>
 
-<InfiniteCarousel animationDuration="slow">
+<Marquee animationDuration="slow">
 	<span>all work & <s>no</s> play - work_louder, inc.</span>
-</InfiniteCarousel>
+</Marquee>
 
 <section id="extra-ctas" class="w-full flex justify-start items-center flex-wrap gap-24 py-24">
 	<div
