@@ -25,6 +25,11 @@
 	onMount(() => {
 		scrollerContent = Array.from(ScrollerInner.children);
 
+		setTimeout(() => {
+			Scroller.style.opacity = '1';
+			Scroller.style.visibility = 'visible';
+		}, 500);
+
 		if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 			addAnimation();
 			duplicateContent();
@@ -34,6 +39,7 @@
 
 <div
 	class="scroller"
+	style={`opacity: 0; visibility: hidden;`}
 	data-animated={animationState}
 	data-duration={animationDuration}
 	data-direction={animationDirection}
