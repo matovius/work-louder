@@ -1,7 +1,24 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import Button from '$lib/components/Button.svelte';
 
 	import nomadPerspective from '$lib/images/nomad-perspective.png';
+
+	let VideoPlayerModal: HTMLDialogElement;
+	let videoPlayerOpen: boolean = false;
+	$: videoPlayerOverflow = videoPlayerOpen ? 'auto' : 'hidden';
+
+	function toggleVideoPlayerModal() {
+		if (!videoPlayerOpen) {
+			VideoPlayerModal.showModal();
+			videoPlayerOpen = true;
+		} else {
+			VideoPlayerModal.close();
+			videoPlayerOpen = false;
+		}
+
+		document.body.style.overflow = videoPlayerOverflow;
+	}
 </script>
 
 <svelte:head>
@@ -61,7 +78,7 @@
 					</p>
 				</div>
 				<div>
-					<Button as="button" variant="solid-primary">
+					<Button as="button" variant="solid-primary" on:click={toggleVideoPlayerModal}>
 						<span>watch video</span>
 					</Button>
 				</div>
@@ -96,7 +113,7 @@
 					</p>
 				</div>
 				<div>
-					<Button as="button" variant="solid-primary">
+					<Button as="button" variant="solid-primary" on:click={toggleVideoPlayerModal}>
 						<span>watch video</span>
 					</Button>
 				</div>
@@ -116,7 +133,7 @@
 					</p>
 				</div>
 				<div>
-					<Button as="button" variant="solid-primary">
+					<Button as="button" variant="solid-primary" on:click={toggleVideoPlayerModal}>
 						<span>watch video</span>
 					</Button>
 				</div>
@@ -135,7 +152,7 @@
 					</p>
 				</div>
 				<div>
-					<Button as="button" variant="solid-primary">
+					<Button as="button" variant="solid-primary" on:click={toggleVideoPlayerModal}>
 						<span>watch video</span>
 					</Button>
 				</div>
@@ -155,7 +172,7 @@
 					</p>
 				</div>
 				<div>
-					<Button as="button" variant="solid-primary">
+					<Button as="button" variant="solid-primary" on:click={toggleVideoPlayerModal}>
 						<span>watch video</span>
 					</Button>
 				</div>
@@ -203,3 +220,32 @@
 		<Button as="button" variant="solid-white">join the discord</Button>
 	</div>
 </section>
+
+<dialog
+	class="isolate backdrop:bg-black/60 backdrop:backdrop-blur bg-transparent m-0 overflow-visible"
+	bind:this={VideoPlayerModal}
+>
+	<div class="fixed inset-0 w-[100dvw] h-[100dvh] flex justify-center items-center mob-lg:p-24">
+		<div
+			id="video-player-wrapper"
+			class="w-full max-w-[30rem] h-full tablet-sm:h-fit flex flex-col justify-center items-center gap-24 p-24 mob-lg:rounded-48 bg-white overflow-hidden"
+		>
+			<header class="w-full flex justify-between items-center">
+				<div>
+					<h5 class="h5 text-black/80">video title goes here</h5>
+				</div>
+				<div>
+					<Button as="button" variant="ghost-black" on:click={toggleVideoPlayerModal}>
+						<span>close</span>
+					</Button>
+				</div>
+			</header>
+			<main
+				id="video-player"
+				class="w-full aspect-video flex justify-center items-center bg-black/10 rounded"
+			>
+				<span class="h5 text-black/40">this is the video</span>
+			</main>
+		</div>
+	</div>
+</dialog>
