@@ -45,7 +45,11 @@
 }
 
 .button {
-	@apply font-inter px-24 py-8 inline-block rounded-full border border-solid border-transparent outline outline-2 outline-transparent outline-offset-2 focus-visible:outline-current;
+	@apply font-inter px-24 py-8 inline-block hover:backdrop-blur focus:backdrop-blur rounded-full border border-solid border-transparent outline outline-2 outline-transparent outline-offset-2 focus-visible:outline-current;
+}
+
+.button:disabled {
+	@apply opacity-50 focus-visible:outline-transparent cursor-not-allowed;
 }
 
 .button.solid-white {
@@ -57,7 +61,7 @@
 }
 
 .button.solid-primary {
-	@apply text-black bg-lemon-lime hover:bg-lemon-lime/80 focus:bg-lemon-lime/80 border-lemon-lime/10;
+	@apply text-black bg-lemon-lime hover:bg-lemon-lime/80 focus:bg-lemon-lime/80 border-black/10;
 }
 
 .button.translucent-white {
