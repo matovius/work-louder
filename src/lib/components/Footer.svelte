@@ -1,5 +1,5 @@
 <script lang="ts">
-	import InfiniteCarousel from './InfiniteCarousel.svelte';
+	import Marquee from './Marquee.svelte';
 	import WlLogoFull from './icons/WLLogoFull.svelte';
 	import founderAvatar from '../images/avatar.png';
 	import { NavLinks, SocialLinks, DummyLegalLinks } from './Links';
@@ -9,9 +9,9 @@
 <footer class="w-full flex justify-center items-center">
 	<div class="container flex flex-col justify-center items-center gap-48">
 		<div id="top" class="w-full flex flex-col justify-start items-center gap-48">
-			<InfiniteCarousel background="solid-primary">
+			<Marquee background="solid-primary">
 				<span>human after all.</span>
-			</InfiniteCarousel>
+			</Marquee>
 
 			<div class="h-36 mob-lg:h-48 text-white">
 				<WlLogoFull />
