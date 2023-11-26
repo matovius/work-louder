@@ -170,7 +170,7 @@
 >
 	<div
 		id="keyboard-practice"
-		class="w-full tablet-lg:max-w-[calc(50%-12px)] tablet-lg:h-360 flex flex-col justify-center items-center gap-24 p-24 rounded bg-white/10"
+		class="w-full tablet-lg:max-w-[calc(50%-12px)] tablet-lg:h-360 flex flex-col justify-center items-center gap-24 p-24 rounded border border-white/10"
 	>
 		<h3 class="h3 text-center">want to type faster?</h3>
 		<p class="paragraph text-center">
@@ -178,7 +178,9 @@
 			fingers on the F and J keys and use the finger closest to the letter you want to press. the
 			goal is to move your hands as little as possible.
 		</p>
-		<Button as="button" variant="solid-white">head to keybr</Button>
+		<a href="https://keybr.com" target="_blank" rel="noopener noreferrer" class="button solid-white"
+			>head to keybr</a
+		>
 	</div>
 
 	<div
