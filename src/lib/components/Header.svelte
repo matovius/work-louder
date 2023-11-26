@@ -12,11 +12,11 @@
 
 	let NavModal: HTMLDialogElement;
 	let navModalOpen: boolean = false;
-	$: navModalOverflow = navModalOpen ? 'hidden' : 'auto';
+	$: navModalOverflow = navModalOpen ? 'auto' : 'hidden';
 
 	let CartModal: HTMLDialogElement;
 	let cartModalOpen: boolean = false;
-	$: cartModalOverflow = cartModalOpen ? 'hidden' : 'auto';
+	$: cartModalOverflow = cartModalOpen ? 'auto' : 'hidden';
 
 	let cartItems: string[];
 	let cartPrice: number;
@@ -33,12 +33,12 @@
 		if (!navModalOpen) {
 			NavModal.showModal();
 			navModalOpen = true;
-			document.body.style.overflow = navModalOverflow;
 		} else {
 			NavModal.close();
 			navModalOpen = false;
-			document.body.style.overflow = cartModalOverflow;
 		}
+
+		document.body.style.overflow = navModalOverflow;
 	}
 
 	function toggleCartModal() {
@@ -49,13 +49,13 @@
 
 		if (!cartModalOpen) {
 			CartModal.showModal();
-			document.body.style.overflow = 'hidden';
 			cartModalOpen = true;
 		} else {
 			CartModal.close();
-			document.body.style.removeProperty('overflow');
 			cartModalOpen = false;
 		}
+
+		document.body.style.overflow = cartModalOverflow;
 	}
 
 	onDestroy(unsubscribeItems);
