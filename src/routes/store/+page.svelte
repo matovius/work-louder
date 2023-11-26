@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>the store - work_louder</title>
+	<title>store - work_louder, inc.</title>
 </svelte:head>
 
 <section id="hero" class="text-black w-full flex justify-center items-center">
