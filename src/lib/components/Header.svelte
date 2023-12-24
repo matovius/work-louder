@@ -84,13 +84,13 @@
 				{#each NavLinks as item}
 					<li>
 						{#if $page.url.pathname.includes(item.url)}
-							<button class="button text-white px-24 py-8 bg-black">
+							<button class="button text-white px-24 py-8 bg-neutral-950">
 								<span>{item.label}</span>
 							</button>
 						{:else}
 							<a
 								href={item.url}
-								class="button text-black hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
+								class="button text-neutral-950 hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
 							>
 								<span>{item.label}</span>
 							</a>
@@ -100,7 +100,7 @@
 
 				<li>
 					<button
-						class="button text-black hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
+						class="button text-neutral-950 hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
 						on:click={toggleCartModal}
 					>
 						<span>cart</span>
@@ -110,7 +110,7 @@
 			<ul class="flex flex-row justify-center items-center gap-4 tablet-lg:hidden">
 				<li>
 					<button
-						class="button text-black hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
+						class="button text-neutral-950 hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
 						on:click={toggleCartModal}
 					>
 						<span>cart</span>
@@ -119,7 +119,7 @@
 
 				<li>
 					<button
-						class="button text-black hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
+						class="button text-neutral-950 hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
 						on:click={toggleNavModal}
 					>
 						<span>menu</span>
@@ -144,7 +144,7 @@
 				</div>
 				<div>
 					<button
-						class="button text-black hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
+						class="button text-neutral-950 hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
 						on:click={toggleNavModal}
 					>
 						<span>close</span>
@@ -156,24 +156,28 @@
 					{#each NavLinks as item}
 						<li>
 							{#if $page.url.pathname.includes(item.url)}
-								<button class="button text-white px-24 py-8 bg-black">
+								<button class="button text-white px-24 py-8 bg-neutral-950">
 									<span>{item.label}</span>
 								</button>
 							{:else}
-								<button
-									class="button text-black hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
+								<a
+									href={item.url}
+									class="button text-neutral-950 hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
 									on:click={toggleNavModal}
 								>
 									<span>{item.label}</span>
-								</button>
+								</a>
 							{/if}
 						</li>
 					{/each}
 
 					<li>
-						<Button as="button" variant="ghost-black" on:click={toggleCartModal}>
+						<button
+							class="button text-neutral-950 hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
+							on:click={toggleCartModal}
+						>
 							<span>cart</span>
-						</Button>
+						</button>
 					</li>
 				</ul>
 			</main>
@@ -195,7 +199,7 @@
 				</div>
 				<div>
 					<button
-						class="button text-black hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
+						class="button text-neutral-950 hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
 						on:click={toggleCartModal}
 					>
 						<span>close</span>
@@ -252,7 +256,7 @@
 
 				<div>
 					{#if cartItems[0] === 'empty'}
-						<button class="button text-white px-24 py-8 bg-black" disabled>
+						<button class="button text-white px-24 py-8 bg-neutral-950" disabled>
 							<span>start checkout</span>
 						</button>
 					{:else}
