@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Flair from '$lib/components/Flair.svelte';
-	import Button from '$lib/components/Button.svelte';
 	import { CartItemsStore, CartPrice } from '$lib/stores/Store';
 	import { onDestroy } from 'svelte';
 
