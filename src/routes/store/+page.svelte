@@ -10,9 +10,9 @@
 	<title>store - work_louder, inc.</title>
 </svelte:head>
 
-<section id="hero" class="text-black w-full flex justify-center items-center">
+<section id="hero" class="text-neutral-950 w-full flex justify-center items-center">
 	<div
-		class="w-full py-96 flex flex-col justify-center items-center gap-48 bg-white rounded overflow-hidden relative"
+		class="w-full py-96 flex flex-col justify-center items-center gap-48 bg-neutral-50 rounded overflow-hidden relative"
 	>
 		<h1 class="h1 text-center relative">store</h1>
 	</div>
