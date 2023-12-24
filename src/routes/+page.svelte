@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Button from '$lib/components/Button.svelte';
 	import Marquee from '$lib/components/Marquee.svelte';
 	import { Asterisk } from 'lucide-svelte';
 
