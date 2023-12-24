@@ -9,6 +9,7 @@
 	import WlLogoFull from './icons/WLLogoFull.svelte';
 	import WlLogoShort from './icons/WLLogoShort.svelte';
 	import { onDestroy } from 'svelte';
+	import WlSmiley from './icons/WLSmiley.svelte';
 
 	let NavModal: HTMLDialogElement;
 	let navModalOpen: boolean = false;
@@ -63,66 +64,66 @@
 
 <header class="w-full flex justify-center items-center p-24 sticky top-0 z-10">
 	<div class="container flex flex-row justify-between items-center">
-		<div
-			class="flex justify-center items-center p-8 bg-black/80 backdrop-blur rounded-full border border-white/10"
-		>
-			{#if $page.url.pathname === '/'}
-				<div class="h-24 hidden tablet-lg:inline-block text-lemon-lime">
-					<WlLogoFull />
+		{#if $page.url.pathname === '/'}
+			<div class="w-36 h-36 aspect-square">
+				<WlSmiley />
+			</div>
+		{:else}
+			<a
+				href="/"
+				class="flex justify-center items-center opacity-100 hover:opacity-60 rounded-12 outline outline-2 outline-offset-4 outline-transparent focus-visible:outline-white"
+				aria-label="the work_louder smiley logo. click to go back to the homepage."
+			>
+				<div class="w-36 h-36 aspect-square">
+					<WlSmiley />
 				</div>
-
-				<div class="h-24 inline-block tablet-lg:hidden text-lemon-lime">
-					<WlLogoShort />
-				</div>
-			{:else}
-				<a
-					href="/"
-					class="flex justify-center items-center opacity-100 hover:opacity-60 focus:opacity-60 rounded-full outline outline-2 outline-offset-4 outline-transparent focus-visible:outline-lemon-lime"
-					aria-label="the work_louder logo. click to go back to the homepage."
-				>
-					<div class="h-24 hidden tablet-lg:inline-block">
-						<WlLogoFull />
-					</div>
-
-					<div class="h-24 inline-block tablet-lg:hidden">
-						<WlLogoShort />
-					</div>
-				</a>
-			{/if}
-		</div>
-		<nav class="p-4 bg-white/60 backdrop-blur rounded-full border border-black/10">
+			</a>
+		{/if}
+		<nav class="p-4 bg-white/80 backdrop-blur rounded-full border border-neutral-200">
 			<ul class="flex-row justify-center items-center gap-4 hidden tablet-lg:flex">
 				{#each NavLinks as item}
 					<li>
 						{#if $page.url.pathname.includes(item.url)}
-							<Button as="button" variant="solid-white">
+							<button class="button text-white px-24 py-8 bg-black">
 								<span>{item.label}</span>
-							</Button>
+							</button>
 						{:else}
-							<Button as="link" variant="ghost-black" url={item.url}>
+							<a
+								href={item.url}
+								class="button text-black hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
+							>
 								<span>{item.label}</span>
-							</Button>
+							</a>
 						{/if}
 					</li>
 				{/each}
 
 				<li>
-					<Button as="button" variant="ghost-black" on:click={toggleCartModal}>
+					<button
+						class="button text-black hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
+						on:click={toggleCartModal}
+					>
 						<span>cart</span>
-					</Button>
+					</button>
 				</li>
 			</ul>
 			<ul class="flex flex-row justify-center items-center gap-4 tablet-lg:hidden">
 				<li>
-					<Button as="button" variant="ghost-black" on:click={toggleCartModal}>
+					<button
+						class="button text-black hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
+						on:click={toggleCartModal}
+					>
 						<span>cart</span>
-					</Button>
+					</button>
 				</li>
 
 				<li>
-					<Button as="button" variant="ghost-black" on:click={toggleNavModal}>
+					<button
+						class="button text-black hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
+						on:click={toggleNavModal}
+					>
 						<span>menu</span>
-					</Button>
+					</button>
 				</li>
 			</ul>
 		</nav>
@@ -142,9 +143,12 @@
 					<h5 class="h5">menu</h5>
 				</div>
 				<div>
-					<Button as="button" variant="ghost-black" on:click={toggleNavModal}>
+					<button
+						class="button text-black hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
+						on:click={toggleNavModal}
+					>
 						<span>close</span>
-					</Button>
+					</button>
 				</div>
 			</header>
 			<main class="w-full p-24 overflow-x-hidden overflow-y-auto">
@@ -152,13 +156,16 @@
 					{#each NavLinks as item}
 						<li>
 							{#if $page.url.pathname.includes(item.url)}
-								<Button as="button" variant="solid-white">
+								<button class="button text-white px-24 py-8 bg-black">
 									<span>{item.label}</span>
-								</Button>
+								</button>
 							{:else}
-								<Button as="link" variant="ghost-black" url={item.url} on:click={toggleNavModal}>
+								<button
+									class="button text-black hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
+									on:click={toggleNavModal}
+								>
 									<span>{item.label}</span>
-								</Button>
+								</button>
 							{/if}
 						</li>
 					{/each}
@@ -187,9 +194,12 @@
 					<h5 class="h5">your cart</h5>
 				</div>
 				<div>
-					<Button as="button" variant="ghost-black" on:click={toggleCartModal}>
+					<button
+						class="button text-black hover:text-neutral-50 px-24 py-8 hover:bg-neutral-950 focus-visible:outline-neutral-950"
+						on:click={toggleCartModal}
+					>
 						<span>close</span>
-					</Button>
+					</button>
 				</div>
 			</header>
 
@@ -217,11 +227,6 @@
 												<span class="small text-black/60">{Product.category}</span>
 												<span class="h4">US${Product.price}</span>
 											</div>
-											<div class="absolute bottom-0 right-0 hidden">
-												<Button as="button" variant="ghost-black">
-													<span>remove</span>
-												</Button>
-											</div>
 										</div>
 									</li>
 								{/if}
@@ -240,13 +245,6 @@
 					<input type="text" class="input" placeholder="enter a note for checkout" />
 				</div>
 
-				<div class="w-full hidden flex-row gap-4">
-					<input type="text" class="input" placeholder="enter a discount code" />
-					<Button as="button" variant="ghost-black">
-						<span>apply</span>
-					</Button>
-				</div>
-
 				<div class="w-full flex flex-row justify-between items-center">
 					<h5 class="h5 text-black/60">subtotal</h5>
 					<span class="">US${cartPrice}</span>
@@ -254,13 +252,13 @@
 
 				<div>
 					{#if cartItems[0] === 'empty'}
-						<Button as="button" variant="solid-black" isDisabled>
+						<button class="button text-white px-24 py-8 bg-black" disabled>
 							<span>start checkout</span>
-						</Button>
+						</button>
 					{:else}
-						<Button as="button" variant="solid-black">
+						<button class="button text-neutral-50 px-24 py-8 bg-neutral-950 hover:bg-neutral-800">
 							<span>start checkout</span>
-						</Button>
+						</button>
 					{/if}
 				</div>
 			</footer>
