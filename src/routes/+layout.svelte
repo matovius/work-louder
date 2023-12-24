@@ -9,7 +9,7 @@
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<div class="text-white w-full bg-black min-h-[100dvh]">
+<div class="text-white w-full">
 	<Header />
 	<main class="w-full flex justify-center items-center p-24">
 		<div class="container flex flex-col justify-center items-center gap-48">
