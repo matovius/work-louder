@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Marquee from './Marquee.svelte';
-	import WlLogoFull from './icons/WLLogoFull.svelte';
+	import WLLogoFull from './icons/WLLogoFull.svelte';
 	import founderAvatar from '../images/avatar.png';
 	import { NavLinks, SocialLinks, DummyLegalLinks } from './Links';
 	import Link from './Link.svelte';
@@ -14,7 +14,7 @@
 			</Marquee>
 
 			<div class="h-36 mob-lg:h-48 text-white">
-				<WlLogoFull />
+				<WLLogoFull />
 			</div>
 
 			<div class="w-fit h-96">
