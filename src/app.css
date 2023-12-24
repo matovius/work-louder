@@ -8,6 +8,10 @@
 	@apply transition-all box-border;
 }
 
+html {
+	@apply bg-black;
+}
+
 .h1 {
 	@apply text-[3.75rem] leading-none font-manrope font-extrabold;
 }
@@ -37,19 +41,22 @@
 }
 
 .input {
-	@apply w-full px-24 py-8 border border-black/10 bg-transparent rounded placeholder:text-black/40 hover:placeholder:text-black/80 focus:placeholder:text-black/80 outline outline-2 outline-transparent outline-offset-2 focus-visible:outline-black;
+	@apply w-full px-24 py-8 border border-neutral-100 bg-transparent rounded-24 placeholder:text-neutral-400
+	hover:placeholder:text-neutral-800 focus:placeholder:text-neutral-800 outline outline-2 outline-transparent
+	outline-offset-2 focus-visible:outline-black;
 }
 
 .link {
-	@apply text-[1rem] leading-6 font-inter text-white/60 hover:text-white inline-block px-12 py-4 rounded-full outline outline-2 outline-transparent outline-offset-2 focus-visible:outline-current;
+	@apply text-[1rem] leading-6 font-inter text-neutral-600 hover:text-white focus:text-white inline-block px-12 py-4 rounded-full
+	outline outline-2 outline-transparent outline-offset-2 focus-visible:outline-current;
 }
 
 .button {
-	@apply font-inter px-24 py-8 inline-block hover:backdrop-blur focus:backdrop-blur rounded-full border border-solid border-transparent outline outline-2 outline-transparent outline-offset-2 focus-visible:outline-current;
-}
+	@apply font-inter inline-block rounded-full border-solid outline outline-2 outline-transparent outline-offset-2;
 
-.button:disabled {
-	@apply opacity-50 focus-visible:outline-transparent cursor-not-allowed;
+	&:disabled {
+		@apply opacity-50 focus-visible:outline-transparent cursor-not-allowed pointer-events-none;
+	}
 }
 
 .button.solid-white {
@@ -85,7 +92,8 @@
 }
 
 .flair-chip {
-	@apply font-inter text-[.75rem] leading-4 font-medium w-fit px-12 py-8 rounded-full flex justify-center items-center pointer-events-none select-none;
+	@apply font-inter text-[.75rem] leading-normal font-medium w-fit px-12 py-8 rounded-full flex justify-center
+	items-center pointer-events-none select-none;
 }
 
 .flair-chip.green-chip {
