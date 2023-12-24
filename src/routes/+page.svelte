@@ -13,14 +13,14 @@
 </script>
 
 <svelte:head>
-	<title>work_louder, inc.</title>
+	<title>work_louder - focus. work. rest.</title>
 </svelte:head>
 
 <section id="hero" class="w-full flex justify-center items-center">
 	<div
 		class="isolate w-full h-480 flex flex-col justify-center items-center gap-48 bg-black rounded overflow-hidden relative"
 	>
-		<div class="absolute inset-0 w-full h-full -z-10 opacity-60">
+		<div class="absolute inset-0 w-full h-full -z-10 opacity-60 bg-neutral-800">
 			<img
 				src={nomadForHeroSection}
 				alt="a full shot of the nomad [e]"
@@ -35,18 +35,21 @@
 			<br />
 			<span>rest.</span>
 
-			<div class="p-4 bg-lemon-lime text-black rounded-full absolute top-0 right-0">
+			<div class="p-4 bg-primary-500 text-black rounded-full absolute top-0 right-0">
 				<Asterisk />
 			</div>
 		</h1>
-		<Button as="link" url="/store/nomad-e" variant="solid-primary">
-			<span class="paragraph">discover the nomad</span>
-		</Button>
+		<a
+			href="/store/nomad-e"
+			class="button text-neutral-950 px-24 py-8 bg-primary-500 hover:bg-primary-600 focus-visible:outline-white"
+		>
+			<span>discover the nomad</span>
+		</a>
 		<div
 			id="asterisk"
 			class="absolute bottom-0 tablet-lg:left-0 w-full tablet-lg:w-240 tablet-lg:max-w-[15rem] flex flex-row justify-center items-center tablet-lg:flex-col tablet-lg:justify-start tablet-lg:items-start gap-12 p-24"
 		>
-			<div class="w-fit h-fit p-4 bg-lemon-lime text-black rounded-full">
+			<div class="w-fit h-fit p-4 bg-primary-500 text-black rounded-full">
 				<Asterisk />
 			</div>
 			<div class="w-full">
@@ -68,14 +71,12 @@
 		id="main-product-card"
 		class="w-full flex flex-col tablet-sm:flex-row justify-center items-center gap-24"
 	>
-		<div class="w-full max-w-[53.5rem] h-360 bg-white/10 rounded overflow-hidden">
-			<div class="w-full h-full">
-				<img
-					src={nomadColorways}
-					alt="a set of nomad [e] colorways: atomic, atomic purple, charcoal, and chalk"
-					class="w-full h-full object-cover"
-				/>
-			</div>
+		<div class="w-full max-w-[53.5rem] h-360 bg-neutral-800 rounded overflow-hidden">
+			<img
+				src={nomadColorways}
+				alt="a set of nomad [e] colorways: atomic, atomic purple, charcoal, and chalk"
+				class="w-full h-full object-cover"
+			/>
 		</div>
 		<div
 			class="text-black w-full tablet-sm:max-w-[22.5rem] h-360 flex flex-col gap-24 p-24 rounded overflow-hidden bg-lemon-lime"
@@ -92,9 +93,12 @@
 				</p>
 			</div>
 			<div class="w-full">
-				<Button as="link" url="/store/nomad-e" variant="solid-white">
+				<a
+					href="/store/nomad-e"
+					class="button text-neutral-950 px-24 py-8 bg-neutral-50 hover:bg-neutral-200 focus-visible:outline-black"
+				>
 					<span>explore</span>
-				</Button>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -125,9 +129,12 @@
 				</p>
 			</div>
 			<div class="w-full">
-				<Button as="button" variant="solid-primary">
+				<a
+					href="#"
+					class="button text-neutral-50 px-24 py-8 bg-neutral-950 hover:bg-neutral-800 focus-visible:outline-black"
+				>
 					<span>explore</span>
-				</Button>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -158,9 +165,12 @@
 				</p>
 			</div>
 			<div class="w-full">
-				<Button as="button" variant="solid-primary">
+				<a
+					href="#"
+					class="button text-neutral-50 px-24 py-8 bg-neutral-950 hover:bg-neutral-800 focus-visible:outline-black"
+				>
 					<span>explore</span>
-				</Button>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -179,9 +189,12 @@
 				<p class="paragraph">sometimes bigger is better. expand your creativity coming Q1, 2024.</p>
 			</div>
 			<div class="w-full">
-				<Button as="button" variant="solid-primary">
+				<a
+					href="#"
+					class="button text-neutral-50 px-24 py-8 bg-neutral-950 hover:bg-neutral-800 focus-visible:outline-black"
+				>
 					<span>explore</span>
-				</Button>
+				</a>
 			</div>
 		</div>
 		<div class="w-full h-360 bg-white/10 rounded overflow-hidden">
@@ -217,9 +230,12 @@
 		<p class="paragraph text-center">
 			for all the keyboards, deskmats, keycaps, modules, collabs, and other merchandise.
 		</p>
-		<Button as="link" variant="solid-primary" url="/store">
+		<a
+			href="/store"
+			class="button text-neutral-950 px-24 py-8 bg-primary-500 hover:bg-primary-600 focus-visible:outline-white"
+		>
 			<span>head to the store</span>
-		</Button>
+		</a>
 	</div>
 
 	<div
@@ -236,8 +252,8 @@
 
 		<h2 class="h2 text-center">wrk.shop</h2>
 		<p class="paragraph text-center">where your renders become reality</p>
-		<Button as="button" variant="translucent-black">
+		<button class="button text-neutral-950 px-24 py-8 bg-neutral-50" disabled>
 			<span>coming soon</span>
-		</Button>
+		</button>
 	</div>
 </section>
