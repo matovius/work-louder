@@ -52,7 +52,7 @@
 {#if size === 'large'}
 	<div
 		id="product-card__large"
-		class=" isolate w-full min-w-full h-fit laptop:h-360 flex flex-col laptop:flex-row justify-center items-center gap-24 bg-black relative outline outline-2 outline-transparent outline-offset-4 focus-visible:outline-current large-card"
+		class=" isolate w-full min-w-full h-fit min-1080:h-360 flex flex-col min-1080:flex-row justify-center items-center gap-24 relative"
 	>
 		<div
 			class="isolate w-full h-240 tablet-sm:h-360 laptop:h-full flex justify-center items-center rounded border border-white/20 overflow-hidden relative"
@@ -94,19 +94,24 @@
 			<div
 				class="w-fit flex flex-row flex-wrap justify-start items-start gap-4 p-24 absolute bottom-0 left-0"
 			>
-				<Button as="button" variant="solid-black" on:click={addItemToCart}>
+				<button
+					class="button text-neutral-50 px-24 py-8 bg-neutral-950 hover:bg-neutral-800 focus-visible:outline-neutral-950"
+					on:click={addItemToCart}
+				>
 					<span>add to cart</span>
-				</Button>
-
-				<Button as="link" {url} variant="solid-black">
+				</button>
+				<a
+					href={url}
+					class="button text-neutral-50 px-24 py-8 bg-neutral-950 hover:bg-neutral-800 focus-visible:outline-neutral-950"
+				>
 					<span>see details</span>
-				</Button>
+				</a>
 			</div>
 		</div>
 
 		<div
 			id="product-details-wrapper"
-			class="isolate w-full laptop:max-w-[15rem] h-full flex flex-col justify-start items-start gap-24 p-24 bg-black rounded border border-white/20 overflow-hidden"
+			class="isolate w-full laptop:max-w-[15rem] h-full flex flex-col justify-start items-start gap-24 overflow-hidden"
 		>
 			<div class="w-full max-w-[22.5rem] h-full flex flex-col justify-start items-start gap-24">
 				<div class="flex flex-col gap-12">
@@ -122,7 +127,7 @@
 {:else if size === 'small'}
 	<div
 		id="product-card__small"
-		class="isolate w-full laptop:max-w-[calc(50%-12px)] h-fit tablet-sm:h-240 flex flex-col tablet-sm:flex-row justify-center items-center gap-24 bg-black relative outline outline-2 outline-transparent outline-offset-4 focus-visible:outline-current"
+		class="isolate w-full laptop:max-w-[calc(50%-12px)] h-fit tablet-sm:h-240 flex flex-col tablet-sm:flex-row justify-center items-center gap-24 relative"
 	>
 		<div
 			class="isolate w-full h-full max-h-240 flex justify-center items-center rounded border border-white/20 overflow-hidden relative"
@@ -167,19 +172,24 @@
 			<div
 				class="w-full flex flex-row flex-wrap justify-start items-start gap-4 p-24 absolute bottom-0 left-0"
 			>
-				<Button as="button" variant="solid-black" on:click={addItemToCart}>
+				<button
+					class="button text-neutral-50 px-24 py-8 bg-neutral-950 hover:bg-neutral-800 focus-visible:outline-neutral-950"
+					on:click={addItemToCart}
+				>
 					<span>add to cart</span>
-				</Button>
-
-				<Button as="link" {url} variant="solid-black">
+				</button>
+				<a
+					href={url}
+					class="button text-neutral-50 px-24 py-8 bg-neutral-950 hover:bg-neutral-800 focus-visible:outline-neutral-950"
+				>
 					<span>see details</span>
-				</Button>
+				</a>
 			</div>
 		</div>
 
 		<div
 			id="product-details-wrapper"
-			class="isolate w-full tablet-sm:max-w-[15rem] h-full flex flex-col justify-start items-start gap-24 p-24 bg-black rounded border border-white/20 overflow-hidden"
+			class="isolate w-full tablet-sm:max-w-[15rem] h-full flex flex-col justify-start items-start gap-24 overflow-hidden"
 		>
 			<div class="w-full max-w-[22.5rem] h-full flex flex-col justify-start items-start gap-24">
 				<div class="flex flex-col gap-12">
