@@ -28,6 +28,7 @@
     justify-content: center;
     align-items: center;
     padding: .75rem; /* 12px */
+    background: linear-gradient(180deg, var(--clr-black) 30%, transparent 60%);
     position: fixed;
     inset-block-start: 0;
     inset-inline: 0;
