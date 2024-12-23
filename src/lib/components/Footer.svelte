@@ -26,6 +26,7 @@
         <a href="/#" class="footer-link">about</a>
       </li>
     </ul>
+
     <ul class="links-list">
       <li>
         <a href="/#" class="footer-link">bluesky</a>
@@ -43,6 +44,7 @@
         <a href="/#" class="footer-link">discord</a>
       </li>
     </ul>
+    
     <ul class="links-list">
       <li>
         <a href="/#" class="footer-link">affiliate program</a>
@@ -97,6 +99,8 @@
   }
 
   a.footer-link {
+    font-size: var(--fs-base);
+    font-weight: 600;
     color: var(--clr-neutral-500);
     text-decoration: none;
     padding-inline: .25rem; /* 4px */
