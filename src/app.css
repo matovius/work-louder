@@ -226,3 +226,48 @@ span {
   --btn-hover-color: var(--clr-black);
   --btn-hover-bg: var(--clr-neutral-200);
 }
+
+.input {
+  /* Configurations */
+  --input-padding: .75rem 1.5rem;
+  /* 12px 24px */
+  --input-bg: var(--clr-white);
+  --input-color: var(--clr-black);
+  --input-placeholder-color: var(--clr-neutral-500);
+  --input-hover-bg: var(--clr-white);
+  --input-hover-color: var(--clr-black);
+  --input-border-width: 2px;
+  --input-border-style: solid;
+  --input-border-color: var(--clr-neutral-200);
+  --input-radius: 9999rem;
+  --input-outline-color: var(--clr-black);
+
+  font-weight: var(--input-font-weight, 600);
+  font-family: var(--font-urban);
+  color: var(--input-color);
+  width: 100%;
+  padding: var(--input-padding);
+  border: var(--input-border-width) var(--input-border-style) var(--input-border-color);
+  border-radius: var(--input-radius);
+  background: var(--input-bg);
+  outline: 2px solid transparent;
+
+  &::placeholder {
+    color: var(--input-placeholder-color);
+  }
+
+  &:is(:hover, :focus) {
+    color: var(--input-hover-color);
+    background: var(--input-hover-bg);
+  }
+
+  &:focus-visible {
+    outline-color: var(--input-outline-color);
+  }
+}
+
+svg.square-icon {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
