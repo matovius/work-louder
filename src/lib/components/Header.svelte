@@ -1,11 +1,15 @@
 <script lang="ts">
+	import Favicon from "$lib/components/Favicon.svelte";
+
 </script>
 
 <header>
   <div class="container">
     <div class="side start">
       <a href="/" class="home-link" aria-label="Go to homepage">
-        <div class="icon placeholder" aria-hidden="true"><span>w</span></div>
+        <div class="icon" aria-hidden="true">
+          <Favicon />
+        </div>
       </a>
     </div>
     <div class="side end">
