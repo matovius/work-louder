@@ -1,0 +1,220 @@
+@import url("@fontsource-variable/urbanist");
+@import url("@fontsource/tiny5");
+@import url("./styles/reset.css");
+
+:root {
+  /* COLORS */
+  /* Defaults */
+  --clr-white: white;
+  --clr-black: black;
+  --clr-lemon-lime: hsl(64, 100%, 50%);
+  /* Palettes */
+  /* Neutral palette */
+  --clr-neutral-50: color-mix(in oklab, var(--clr-white), var(--clr-black) 5%);
+  --clr-neutral-100: color-mix(in oklab, var(--clr-white), var(--clr-black) 10%);
+  --clr-neutral-200: color-mix(in oklab, var(--clr-white), var(--clr-black) 20%);
+  --clr-neutral-300: color-mix(in oklab, var(--clr-white), var(--clr-black) 30%);
+  --clr-neutral-400: color-mix(in oklab, var(--clr-white), var(--clr-black) 40%);
+  --clr-neutral-500: color-mix(in oklab, var(--clr-white), var(--clr-black) 50%);
+  --clr-neutral-600: color-mix(in oklab, var(--clr-white), var(--clr-black) 60%);
+  --clr-neutral-700: color-mix(in oklab, var(--clr-white), var(--clr-black) 70%);
+  --clr-neutral-800: color-mix(in oklab, var(--clr-white), var(--clr-black) 80%);
+  --clr-neutral-900: color-mix(in oklab, var(--clr-white), var(--clr-black) 90%);
+  --clr-neutral-950: color-mix(in oklab, var(--clr-white), var(--clr-black) 95%);
+  /* Brand palette */
+  --clr-primary-50: color-mix(in oklab, var(--clr-lemon-lime), var(--clr-white) 90%);
+  --clr-primary-100: color-mix(in oklab, var(--clr-lemon-lime), var(--clr-white) 80%);
+  --clr-primary-200: color-mix(in oklab, var(--clr-lemon-lime), var(--clr-white) 60%);
+  --clr-primary-300: color-mix(in oklab, var(--clr-lemon-lime), var(--clr-white) 40%);
+  --clr-primary-400: color-mix(in oklab, var(--clr-lemon-lime), var(--clr-white) 20%);
+  --clr-primary-500: var(--clr-lemon-lime);
+  --clr-primary-600: color-mix(in oklab, var(--clr-lemon-lime), var(--clr-black) 20%);
+  --clr-primary-700: color-mix(in oklab, var(--clr-lemon-lime), var(--clr-black) 40%);
+  --clr-primary-800: color-mix(in oklab, var(--clr-lemon-lime), var(--clr-black) 60%);
+  --clr-primary-900: color-mix(in oklab, var(--clr-lemon-lime), var(--clr-black) 80%);
+  --clr-primary-950: color-mix(in oklab, var(--clr-lemon-lime), var(--clr-black) 90%);
+  /* FONTS */
+  /* Font Sizes */
+  /* For browsers that don't support clamp */
+  --fs-sm: 0.8rem;
+  --fs-base: 1rem;
+  --fs-md: 1.25rem;
+  --fs-lg: 1.56rem;
+  --fs-xl: 1.95rem;
+  --fs-xxl: 2.44rem;
+  --fs-xxxl: 3.05rem;
+
+  @media screen and (min-width: 1200px) {
+    --fs-sm: 0.84rem;
+    --fs-base: 1.13rem;
+    --fs-md: 1.5rem;
+    --fs-lg: 2rem;
+    --fs-xl: 2.66rem;
+    --fs-xxl: 3.55rem;
+    --fs-xxxl: 4.73rem;
+  }
+
+  /* For browsers that support clamp  */
+  @supports (font-size: clamp(1rem, 1vi, 1rem)) {
+    --fs-sm: clamp(0.8rem, 0.09vi + 0.78rem, 0.84rem);
+    --fs-base: clamp(1rem, 0.25vi + 0.94rem, 1.13rem);
+    --fs-md: clamp(1.25rem, 0.5vi + 1.13rem, 1.5rem);
+    --fs-lg: clamp(1.56rem, 0.87vi + 1.34rem, 2rem);
+    --fs-xl: clamp(1.95rem, 1.42vi + 1.6rem, 2.66rem);
+    --fs-xxl: clamp(2.44rem, 2.22vi + 1.89rem, 3.55rem);
+    --fs-xxxl: clamp(3.05rem, 3.37vi + 2.21rem, 4.73rem);
+  }
+
+  /* Font Families */
+  --font-sys: system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  Oxygen,
+  Ubuntu,
+  Cantarell,
+  'Open Sans',
+  'Helvetica Neue',
+  sans-serif;
+  --font-mono: 'Courier New',
+  Courier,
+  monospace;
+  --font-urban: 'Urbanist Variable',
+  var(--font-sys);
+  --font-tiny: 'Tiny5',
+  var(--font-mono);
+}
+
+*,
+*::before,
+*::after {
+  transition: all 200ms ease-out;
+}
+
+::selection {
+  color: var(--clr-black);
+  background: var(--clr-primary-500);
+}
+
+body {
+  font-family: var(--font-urban);
+  color: var(--clr-white);
+  background: var(--clr-black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+}
+
+h1,
+.h1 {
+  font-size: var(--fs-xxxl);
+}
+
+h2,
+.h2 {
+  font-size: var(--fs-xxl);
+}
+
+h3,
+.h3 {
+  font-size: var(--fs-xl);
+}
+
+h4,
+.h4 {
+  font-size: var(--fs-lg);
+}
+
+h5,
+.h5 {
+  font-size: var(--fs-md);
+}
+
+h6,
+.h6 {
+  font-size: var(--fs-base);
+}
+
+p,
+.p {
+  font-size: var(--fs-base);
+}
+
+small,
+.small {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+
+span {
+  font: inherit;
+}
+
+.btn {
+  /* Configurations */
+  --btn-padding: .25rem .75rem;
+  --btn-gap: .75rem;
+  --btn-bg: var(--clr-black);
+  --btn-color: var(--clr-white);
+  --btn-hover-bg: var(--clr-neutral-800);
+  --btn-hover-color: var(--clr-white);
+  --btn-border-width: 2px;
+  --btn-border-style: solid;
+  --btn-border-color: transparent;
+  --btn-radius: 9999rem;
+  --btn-outline-color: var(--clr-black);
+
+  text-decoration: none;
+  font-weight: var(--btn-font-weight, 600);
+  letter-spacing: 0.05ch;
+  font-family: var(--font-urban);
+  line-height: 1.1;
+  color: var(--btn-color);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--btn-gap);
+  padding: var(--btn-padding);
+  border: none;
+  border-radius: var(--btn-radius);
+  background: var(--btn-bg);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  cursor: pointer;
+
+  &:is(:hover, :focus) {
+    color: var(--btn-hover-color);
+    background: var(--btn-hover-bg);
+  }
+
+  &:focus-visible {
+    outline-color: var(--btn-outline-color);
+  }
+}
+
+.btn.btn-inverse {
+  --btn-bg: var(--clr-white);
+  --btn-color: var(--clr-black);
+  --btn-hover-bg: var(--clr-neutral-200);
+  --btn-hover-color: var(--clr-black);
+}
+
+.btn.btn-primary {
+  --btn-bg: var(--clr-primary-500);
+  --btn-color: var(--clr-black);
+  --btn-hover-bg: var(--clr-primary-700);
+  --btn-hover-color: var(--clr-black);
+}
+
+.btn.btn-ghost {
+  --btn-bg: transparent;
+  --btn-color: var(--clr-neutral-800);
+  --btn-hover-color: var(--clr-black);
+  --btn-hover-bg: var(--clr-neutral-200);
+}
