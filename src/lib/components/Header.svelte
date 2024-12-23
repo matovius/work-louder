@@ -63,6 +63,7 @@
         padding: .25rem; /* 4px */
         background: var(--clr-white);
         border-radius: 9999rem;
+        box-shadow: 0 4px 4px 0 color-mix(in oklab, var(--clr-black), transparent 80%);
       }
     }
 
@@ -72,6 +73,7 @@
     padding: .75rem; /* 12px */
     background: var(--clr-white);
     border-radius: 9999rem;
+    box-shadow: 0 4px 4px 0 color-mix(in oklab, var(--clr-black), transparent 80%);
     user-select: none;
     outline: 2px solid transparent;
     outline-offset: 2px;
