@@ -8,11 +8,12 @@
 
   interface Props {
     bgColor?: string;
+    textColor?: string;
     speed?: MarqueeSpeed;
     children?: any;
   }
 
-  let { bgColor='var(--clr-black)', speed='fast', children='Hello World!' }: Props = $props();
+  let { bgColor='var(--clr-black)', textColor='var(--clr-white)', speed='fast', children='Hello World!' }: Props = $props();
 
   let marquee: HTMLDivElement;
   let scroller: HTMLUListElement;
@@ -42,13 +43,13 @@
 </script>
 
 <div
-  class="marquee" style="opacity: 0; visibility: hidden; --_bg: {bgColor}"
+  class="marquee" style="opacity: 0; visibility: hidden; --_bg: {bgColor}; --_fg: {textColor};"
   data-is-animated={isAnimated}
   data-speed={speed}
   bind:this={marquee}
 >
   <ul
-    class="scroller h-full flex justify-center items-center gap-[4em] px-0 py-12"
+    class="scroller"
     bind:this={scroller}
   >
     <li aria-hidden="true">
@@ -77,11 +78,13 @@
     font-family: var(--font-tiny);
     font-size: var(--fs-xxxl);
     line-height: 1;
+    color: var(--_fg);
     width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-block: 1.5rem; /* 24px */
+    background: var(--_bg);
     user-select: none;
     position: relative;
     isolation: isolate;
