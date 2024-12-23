@@ -115,42 +115,50 @@ h6 {
 h1,
 .h1 {
   font-size: var(--fs-xxxl);
+  line-height: 1;
 }
 
 h2,
 .h2 {
   font-size: var(--fs-xxl);
+  line-height: 1;
 }
 
 h3,
 .h3 {
   font-size: var(--fs-xl);
+  line-height: 1.2;
 }
 
 h4,
 .h4 {
   font-size: var(--fs-lg);
+  line-height: 1.2;
 }
 
 h5,
 .h5 {
   font-size: var(--fs-md);
+  line-height: 1.5;
 }
 
 h6,
 .h6 {
   font-size: var(--fs-base);
+  line-height: 1.5;
 }
 
 p,
 .p {
   font-size: var(--fs-base);
+  line-height: 1.5;
 }
 
 small,
 .small {
   font-size: var(--fs-sm);
   font-weight: 500;
+  line-height: 1.5;
 }
 
 span {
