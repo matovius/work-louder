@@ -83,8 +83,8 @@
     </div>
   </section>
 
-  <Marquee>
-    <span class="muted-marquee">know productivity, efficiency, passion, and creativity with no limits.</span>
+  <Marquee textColor="var(--clr-neutral-400)">
+    <span class="marquee-text">know productivity, efficiency, passion, and creativity with no limits.</span>
   </Marquee>
 
   <section id="products" class="products-section">
@@ -105,8 +105,8 @@
     </div>
   </section>
 
-  <Marquee>
-    <span class="muted-marquee">all work and <s>no</s> play - work_louder inc.</span>
+  <Marquee textColor="var(--clr-neutral-400)">
+    <span class="marquee-text">all work and <s>no</s> play - work_louder inc.</span>
   </Marquee>
 
   <section id="extras" class="extras-section">
@@ -396,9 +396,7 @@
 
   }
 
-  span.muted-marquee {
-    color: var(--clr-neutral-400);
-
+  span.marquee-text {
     & > s {
       color: var(--clr-primary-500);
     }
