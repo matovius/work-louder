@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<div class="container extra">
+<div class="container card input">
   <div class="bg">
     <div class="desktop-image"></div>
   </div>
@@ -20,7 +20,8 @@
 
 
 <style>
-  .container.extra {
+  .container.input {
+    --card-border-color: var(--clr-neutral-100);
     --_height: 12.5rem; /* 200px */
     height: var(--_height);
     display: flex;
