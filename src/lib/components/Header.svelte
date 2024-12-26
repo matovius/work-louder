@@ -198,6 +198,7 @@
 
     & .main {
       width: 100%;
+      padding: .75rem; /* 12px */
 
       & > .tab {
         width: 100%;
