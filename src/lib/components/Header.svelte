@@ -46,8 +46,8 @@
               <h5>{currentDialogTab === "cart" ? "cart" : "menu"}</h5>
             </div>
 
-            <button class="btn btn-outlined close" aria-label="Close" onclick={() => { isDialogOpen = false;}}>
-              <span aria-hidden="true">Close</span>
+            <button class="btn btn-outlined close" aria-label="close" onclick={() => { isDialogOpen = false;}}>
+              <span aria-hidden="true">close</span>
             </button>
           </div>
 
