@@ -56,7 +56,7 @@
 
 <main>
   <section id="hero" class="hero-section">
-    <div class="container main">
+    <div class="container card nomad">
       <div class="bg"></div>
       <div class="content">
         <h1>focus.<br>work.<br>rest.</h1>
@@ -159,7 +159,8 @@
       }
     }
   }
-  section.hero-section > .container.main {
+  section.hero-section > .container.nomad {
+    --card-border-color: var(--clr-neutral-800);
     min-height: 70vh;
 
     & > .content {
