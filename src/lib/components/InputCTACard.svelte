@@ -26,11 +26,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 1.5rem; /* 24px */
-    border-radius: 24px;
-    isolation: isolate;
-    position: relative;
-    overflow: hidden;
     
     & > .bg {
       display: flex;
