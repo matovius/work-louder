@@ -47,9 +47,9 @@
     width: 100%;
     display: block;
     border-radius: 1.5rem; /* 24px */
-    border: 1px solid var(--clr-neutral-800);
+    border: .125rem solid var(--clr-neutral-800); /* 2px */
     overflow: hidden;
-    outline: 2px solid transparent;
+    outline: .125rem solid transparent; /* 2px */
     outline-offset: .25rem; /* 4px */
 
     &:is(:hover, :focus) {
