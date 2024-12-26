@@ -140,19 +140,8 @@
     margin-block-start: 72px;
     min-height: 200vh;
   }
-  
-  section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-inline: .75rem; /* 12px */
 
-    & > .container {
-      width: 100%;
-      max-width: 75rem; /* 1200px */
-    }
-  }
-
+  /* HERO SECTION */
   section.hero-section {
     flex-direction: column;
     gap: .75rem; /* 12px */
@@ -161,11 +150,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 3rem 1.5rem; /* 48px 24px */
-      border-radius: 24px;
-      isolation: isolate;
-      position: relative;
-      overflow: hidden;
       
       & > .bg {
         background: var(--clr-neutral-800);
@@ -224,6 +208,7 @@
     }
   }
 
+  /* EXTRAS SECTION */
   section.extras-section {
     flex-direction: column;
     gap: .75rem; /* 12px */
